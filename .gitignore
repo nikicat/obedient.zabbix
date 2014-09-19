@@ -1,0 +1,4 @@
+/*.yaml
+__pycache__/
+cache.sqlite
+*.egg-info/
