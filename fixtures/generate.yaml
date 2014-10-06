@@ -1,0 +1,50 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.4.1 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
+    method: GET
+    uri: http://localhost:4243/v1.12/images/json?filter=registry.ape.yandex.net%2Fyandex%2Ftrusty&only_ids=0&all=1
+  response:
+    body: {string: '[{"Created":1412612954,"Id":"dd958970777f8b22475dc50f053242309a8b870ec477ef08eb8ea6b835150f05","ParentId":"c9187e9db0bef97c47f8497af505fc88685c0d5a4da870372b976a98466c0de6","RepoTags":["registry.ape.yandex.net/yandex/trusty:latest"],"Size":0,"VirtualSize":471237395}
+
+        ]'}
+    headers:
+      Content-Length: ['268']
+      Content-Type: [application/json]
+      Date: ['Mon, 06 Oct 2014 22:17:32 GMT']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.4.1 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
+    method: GET
+    uri: http://localhost:4243/v1.12/images/json?filter=postgres&only_ids=0&all=1
+  response:
+    body: {string: '[{"Created":1408373327,"Id":"6b6f2b6e36198040e45afc8574072e3a83694407b37c1b2c016ff86f3b329b1d","ParentId":"da3d9bf1690e5d80980b610138685fb203106e46fdab11b035d611e319cbad06","RepoTags":["postgres:9.0.18","postgres:9.0"],"Size":0,"VirtualSize":211629877}
+
+        ,{"Created":1408373284,"Id":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","ParentId":"d221d3d8f66356809c4f2c445e4649ecc33d6e1e03e7efb20edeaaae13b81022","RepoTags":["postgres:latest","postgres:9.3","postgres:9.3.5","postgres:9"],"Size":0,"VirtualSize":213094997}
+
+        ,{"Created":1408373242,"Id":"47d8eae2c74cebc8cff86deb5be79f530208b7cdd57d8530981798614b41788c","ParentId":"3ad8d16b9f5dbc11963943bde021540406ab7a94d284fcb1e542fd13050b9c05","RepoTags":["postgres:8.4.22","postgres:8.4","postgres:8"],"Size":0,"VirtualSize":211183154}
+
+        ,{"Created":1408373200,"Id":"4c2909880764402365adcad3e3d8a417f23127ae07612f58c9ab4d4a5cf49de2","ParentId":"8491239ebf498ba79470867f7bbac60b46ac783f205379bb42977a68b53104ce","RepoTags":["postgres:9.2","postgres:9.2.9"],"Size":0,"VirtualSize":212809537}
+
+        ,{"Created":1408373153,"Id":"ecc15442381743249e6af8f1a2542b505099f1b79d93e93bd801f586d7778712","ParentId":"5683d7ecaff61aa7ed36c4d1d7dbc58b158037222cb58ba195e2edd36ff99cbe","RepoTags":["postgres:9.1","postgres:9.1.14"],"Size":0,"VirtualSize":212288139}
+
+        ,{"Created":1408373109,"Id":"764b1cea6d1d1a92f9f944868437c38ce3ac5c68b9dd1e7aeb46a5a0d318042a","ParentId":"32a9977584bf4f1a29da17e7798964e8506da87208b24ec56462331653f70348","RepoTags":["postgres:9.4-beta2","postgres:9.4"],"Size":0,"VirtualSize":213546196}
+
+        ,{"Created":1401931132,"Id":"6befe01f7a4743bb2ac96e029ad46a8b172471f56ce26515fb0c1ac0f551a778","ParentId":"aebb34f8003c22a3e4460524f9f592c250676314a715ff4f3418b5999e66b465","RepoTags":["postgres:9.3.4"],"Size":0,"VirtualSize":803891358}
+
+        ]'}
+    headers:
+      Content-Length: ['1801']
+      Content-Type: [application/json]
+      Date: ['Mon, 06 Oct 2014 22:17:32 GMT']
+    status: {code: 200, message: OK}
+version: 1
