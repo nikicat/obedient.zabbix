@@ -12,7 +12,13 @@ if __name__ == '__main__':
         platforms='linux',
         packages=['obedient.zabbix'],
         namespace_packages=['obedient'],
-        package_data={'obedient.zabbix': ['zabbix_server.conf']},
+        package_data={'obedient.zabbix': [
+            'zabbix_server.conf',
+            'apache.conf',
+            'zabbix.conf.php',
+            'frontend.sh',
+            'zabbix.sh',
+        ]},
         entry_points={'obedient': [
             'local = obedient.zabbix:make_local',
             'one-host = obedient.zabbix:make_for_host',
