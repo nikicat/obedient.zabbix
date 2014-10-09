@@ -29,6 +29,7 @@ def make_server_image():
         scripts=[
             'DEBIAN_FRONTEND=noninteractive apt-get install -y zabbix-server-pgsql '
             'strace snmp-mibs-downloader fping nmap',
+            'ln -fs /usr/bin/fping /usr/sbin/',
         ],
         files={
             '/scripts/zabbix.sh': resource_string('zabbix.sh'),
