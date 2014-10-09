@@ -1,7 +1,7 @@
 from textwrap import dedent
 from dominator.utils import resource_string, cached
 from dominator.entities import (SourceImage, Image, DataVolume, ConfigVolume, TemplateFile,
-                                Container, LogVolume, LocalShip, Url,
+                                Container, LogVolume, Url,
                                 Shipment, Door, TextFile, LogFile, Task)
 
 
@@ -160,22 +160,17 @@ def make_db_task(name, script):
     )
 
 
-def make_local():
-    ship = LocalShip()
-    return make_for_ship(ship, 'local')
+def create(ships):
+    allcontainers = []
+    alltasks = []
+    for ship in ships:
+        containers, tasks = make()
+        for cont in containers:
+            ship.place(cont)
+        ship.containers['zabbix-backend'].doors['zabbix-trapper'].expose(10051)
+        ship.containers['zabbix-frontend'].doors['http'].expose(80)
+        ship.expose_all(range(15000, 16000))
 
-
-def make_for_host(hostname, name=None):
-    from dominator.yandex import get_ship_from_conductor
-    ship = get_ship_from_conductor(hostname)
-    return make_for_ship(ship, name)
-
-
-def make_for_ship(ship, name):
-    containers, tasks = make()
-    for cont in containers:
-        ship.place(cont)
-    ship.containers['zabbix-backend'].doors['zabbix-trapper'].expose(10051)
-    ship.containers['zabbix-frontend'].doors['http'].expose(80)
-    ship.expose_all(range(15000, 16000))
-    return Shipment(name or ship.name, containers=containers, tasks=tasks)
+        allcontainers.extend(containers)
+        alltasks.extend(alltasks)
+    return Shipment(name='', containers=allcontainers, tasks=alltasks)

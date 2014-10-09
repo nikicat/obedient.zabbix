@@ -20,10 +20,9 @@ if __name__ == '__main__':
             'zabbix.sh',
         ]},
         entry_points={'obedient': [
-            'local = obedient.zabbix:make_local',
-            'one-host = obedient.zabbix:make_for_host',
+            'create = obedient.zabbix:create',
         ]},
         install_requires=[
-            'dominator[full] >=11.1',
+            'dominator[full] >=11.6',
         ],
     )
