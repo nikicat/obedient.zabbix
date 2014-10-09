@@ -7,126 +7,13 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '[{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412849705,"Id":"7149242bcbbe2f029f0382b9eb2525d52e4f1cc58189b03a87475f4278013ff1","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
-        9 minutes"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
-
-        ]'}
+    body: {string: '[]'}
     headers:
+      Content-Length: ['2']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:34 GMT']
-      Transfer-Encoding: [chunked]
-    status: {code: 200, message: OK}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['0']
-      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
-    method: POST
-    uri: http://localhost:4243/v1.12/containers/7149242bcbbe2f029f0382b9eb2525d52e4f1cc58189b03a87475f4278013ff1/stop?t=2
-  response:
-    body: {string: ''}
-    headers:
-      Date: ['Thu, 09 Oct 2014 10:24:34 GMT']
-    status: {code: 204, message: No Content}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
-    method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
-  response:
-    body: {string: '[{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412849705,"Id":"7149242bcbbe2f029f0382b9eb2525d52e4f1cc58189b03a87475f4278013ff1","Image":"postgres:9","Names":["/.postgres"],"Ports":[],"Status":"Exited
-        (0) Less than a second ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
-
-        ]'}
-    headers:
-      Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:34 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:30 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -136,54 +23,13 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '[{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412849705,"Id":"7149242bcbbe2f029f0382b9eb2525d52e4f1cc58189b03a87475f4278013ff1","Image":"postgres:9","Names":["/.postgres"],"Ports":[],"Status":"Exited
-        (0) Less than a second ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
-
-        ]'}
+    body: {string: '[]'}
     headers:
+      Content-Length: ['2']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:35 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:30 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -193,70 +39,14 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '[{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412849705,"Id":"7149242bcbbe2f029f0382b9eb2525d52e4f1cc58189b03a87475f4278013ff1","Image":"postgres:9","Names":["/.postgres"],"Ports":[],"Status":"Exited
-        (0) Less than a second ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
-
-        ]'}
+    body: {string: '[]'}
     headers:
+      Content-Length: ['2']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:35 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:30 GMT']
     status: {code: 200, message: OK}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['0']
-      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
-    method: DELETE
-    uri: http://localhost:4243/v1.12/containers/7149242bcbbe2f029f0382b9eb2525d52e4f1cc58189b03a87475f4278013ff1?v=False&link=False&force=False
-  response:
-    body: {string: ''}
-    headers:
-      Date: ['Thu, 09 Oct 2014 10:24:35 GMT']
-    status: {code: 204, message: No Content}
 - request:
     body: null
     headers:
@@ -265,7 +55,23 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fpostgres&only_ids=0&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+  response:
+    body: {string: '[]'}
+    headers:
+      Content-Length: ['2']
+      Content-Type: [application/json]
+      Date: ['Thu, 09 Oct 2014 14:03:30 GMT']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
+    method: GET
+    uri: http://localhost:4243/v1.12/images/json?only_ids=0&filter=registry.ape.yandex.net%2Fnikicat%2Fpostgres&all=1
   response:
     body: {string: '[{"Created":1408373284,"Id":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","ParentId":"d221d3d8f66356809c4f2c445e4649ecc33d6e1e03e7efb20edeaaae13b81022","RepoTags":["registry.ape.yandex.net/nikicat/postgres:japvRfJBfL3nz73mcoDMlwRnKJOSkZ7lq-lk9qc1JEk="],"Size":0,"VirtualSize":213094997}
 
@@ -273,14 +79,13 @@ interactions:
     headers:
       Content-Length: ['309']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:35 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:30 GMT']
     status: {code: 200, message: OK}
 - request:
-    body: '{"Hostname": "postgres-localship", "AttachStderr": true, "NetworkDisabled":
-      false, "Memory": 0, "Tty": false, "StdinOnce": true, "OpenStdin": true, "Image":
-      "registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23",
-      "User": "", "MemorySwap": 0, "Env": [], "AttachStdin": true, "ExposedPorts":
-      {"5432/tcp": {}}, "AttachStdout": true}'
+    body: '{"ExposedPorts": {"5432/tcp": {}}, "OpenStdin": true, "MemorySwap": 0,
+      "NetworkDisabled": false, "Env": [], "Image": "registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23",
+      "AttachStdin": true, "User": "", "Tty": false, "Memory": 0, "StdinOnce": true,
+      "Hostname": "postgres-localship", "AttachStderr": true, "AttachStdout": true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -291,18 +96,19 @@ interactions:
     method: POST
     uri: http://localhost:4243/v1.12/containers/create?name=.postgres
   response:
-    body: {string: '{"Id":"e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8","Warnings":null}
+    body: {string: '{"Id":"75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a","Warnings":null}
 
 '}
     headers:
       Content-Length: ['90']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:35 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:30 GMT']
     status: {code: 201, message: Created}
 - request:
-    body: '{"PortBindings": {"5432/tcp": [{"HostPort": "15999", "HostIp": "::"}]},
-      "PublishAllPorts": false, "Privileged": false, "Binds": ["/tmp/data/postgres/var/log/postgresql:/var/log/postgresql:rw",
-      "/tmp/data/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw"]}'
+    body: '{"Binds": ["/tmp/data/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw",
+      "/tmp/data/postgres/var/log/postgresql:/var/log/postgresql:rw"], "PublishAllPorts":
+      false, "PortBindings": {"5432/tcp": [{"HostPort": "15999", "HostIp": "::"}]},
+      "Privileged": false}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -311,11 +117,11 @@ interactions:
       Content-Type: [application/json]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.12/containers/e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8/start
+    uri: http://localhost:4243/v1.12/containers/75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a/start
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 09 Oct 2014 10:24:35 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:31 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -325,54 +131,16 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '[{"Command":"/docker-entrypoint.sh postgres","Created":1412850275,"Id":"e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/docker-entrypoint.sh postgres","Created":1412863410,"Id":"75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         Less than a second"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
 
         ]'}
     headers:
+      Content-Length: ['290']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:35 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:31 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -382,9 +150,21 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-server&only_ids=0&all=1
+    uri: http://localhost:4243/v1.12/images/json?only_ids=0&filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-server&all=1
   response:
-    body: {string: '[{"Created":1412849835,"Id":"27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e","ParentId":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:cjLujInmdz2KR22tEVBw6VPeX3RgxnMr94x76lvBUUQ="],"Size":168,"VirtualSize":611292695}
+    body: {string: '[{"Created":1412863058,"Id":"ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea","ParentId":"39ae662440738e2c543f0810dedc0a993cc5d7af5df6e7e5f6080caff2b3991d","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:+H7uMgkiBFEiWyoqnnjNa6mze1v1yByvRvyKCHQdIGA="],"Size":382,"VirtualSize":611292927}
+
+        ,{"Created":1412862492,"Id":"05b3934b103343d3d4a06c1ceb79d515b4802006bde0910eaf69164c9d158cb2","ParentId":"f2fdce567f17a662079dcf452b9a536f5d8f041f30b2e4cb06662e8c5970efb7","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:kPtBD1iUatLe+MsFRvNXWdL-Bj1peJQmJqsQw7nr1OY="],"Size":382,"VirtualSize":611292927}
+
+        ,{"Created":1412861954,"Id":"06e2b8ff3ad63a4406b9e082c5e29017d383cbb68b545d0167d6f88ebeb6c005","ParentId":"444fe420e3f4e5fb0812851cbd3cebe7a08fca304ceba9674d508e1dc5741d5f","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:JwXQAtZaLujy+ENKdeoATvkmGR7p6eMbeTTQrbSApGQ="],"Size":223,"VirtualSize":611292814}
+
+        ,{"Created":1412861001,"Id":"6be01736df2196822fe73b267bfcb1e7a92636b6bbd86655303ce3480e4e5e42","ParentId":"e0e2163a627426376391c58603b49825120185a3888e0449c11925b526e9227e","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:KkRrYHIu6KvYQ18fW-kWm-pJ6PXpqJ--6m5KLpix6Bo="],"Size":223,"VirtualSize":611292810}
+
+        ,{"Created":1412860779,"Id":"017ba47420af3acf706c8918f77bf3b1367fedc43ca0ad1e6bbfd36a29db3747","ParentId":"3d9356eea35da19289d2e7efd48e3d4235cb6bc526276edc9014fdebe2bed861","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:dhXcchs7kF6TEZygFo22t9UNoUvVWdVDUrBz+SnAq4s="],"Size":230,"VirtualSize":611292817}
+
+        ,{"Created":1412855331,"Id":"106e1de4d5531f8e3172e6e8df0265cadaeaa61c3ee870bcef11656fdfb6ca44","ParentId":"787bf5c10696799ceaaebe11c8d5e72c6ea02247336a896d147f57bec3c4883c","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:Z+Ha-6nRN+npACroBwL68wCBTdLegFzwTWwNeKek0Ho="],"Size":168,"VirtualSize":611292709}
+
+        ,{"Created":1412849835,"Id":"27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e","ParentId":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:cjLujInmdz2KR22tEVBw6VPeX3RgxnMr94x76lvBUUQ="],"Size":168,"VirtualSize":611292695}
 
         ,{"Created":1412698334,"Id":"4ea3ffffef619f78d2a15faa06edbcdbd83fffa53c1019eaba37d686f88849a7","ParentId":"1eaafe6e3fcc77499016387173379debb3760d61ba9e3a73aa2a49ac8f961754","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:oziLfobr7AfVqEgXlqY69tU5U9K8P0WYAMOf3OEbPGg="],"Size":168,"VirtualSize":611260941}
 
@@ -403,15 +183,15 @@ interactions:
         ]'}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:31 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
-    body: '{"Hostname": "zabbix-backend-localship", "AttachStderr": true, "NetworkDisabled":
-      false, "Memory": 0, "Tty": false, "StdinOnce": true, "OpenStdin": true, "Image":
-      "registry.ape.yandex.net/nikicat/zabbix-server:27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e",
-      "User": "", "MemorySwap": 0, "Env": [], "AttachStdin": true, "ExposedPorts":
-      {"10051/tcp": {}}, "AttachStdout": true}'
+    body: '{"ExposedPorts": {"10051/tcp": {}}, "OpenStdin": true, "MemorySwap": 0,
+      "NetworkDisabled": false, "Env": [], "Image": "registry.ape.yandex.net/nikicat/zabbix-server:ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea",
+      "AttachStdin": true, "User": "", "Tty": false, "Memory": 0, "StdinOnce": true,
+      "Hostname": "zabbix-backend-localship", "AttachStderr": true, "AttachStdout":
+      true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -422,18 +202,18 @@ interactions:
     method: POST
     uri: http://localhost:4243/v1.12/containers/create?name=.zabbix-backend
   response:
-    body: {string: '{"Id":"88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1","Warnings":null}
+    body: {string: '{"Id":"64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db","Warnings":null}
 
 '}
     headers:
       Content-Length: ['90']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:31 GMT']
     status: {code: 201, message: Created}
 - request:
-    body: '{"PortBindings": {"10051/tcp": [{"HostPort": "10051", "HostIp": "::"}]},
-      "PublishAllPorts": false, "Privileged": true, "Binds": ["/tmp/config/zabbix-backend/etc/zabbix:/etc/zabbix:ro",
-      "/tmp/data/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw"]}'
+    body: '{"Binds": ["/tmp/config/zabbix-backend/etc/zabbix:/etc/zabbix:ro", "/tmp/data/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw"],
+      "PublishAllPorts": false, "PortBindings": {"10051/tcp": [{"HostPort": "10051",
+      "HostIp": "::"}]}, "Privileged": true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -442,11 +222,11 @@ interactions:
       Content-Type: [application/json]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.12/containers/88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1/start
+    uri: http://localhost:4243/v1.12/containers/64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db/start
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:31 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -456,57 +236,19 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '[{"Command":"bash /scripts/zabbix.sh","Created":1412850276,"Id":"88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1","Image":"registry.ape.yandex.net/nikicat/zabbix-server:cjLujInmdz2KR22tEVBw6VPeX3RgxnMr94x76lvBUUQ=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"bash /scripts/zabbix.sh","Created":1412863411,"Id":"64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db","Image":"registry.ape.yandex.net/nikicat/zabbix-server:+H7uMgkiBFEiWyoqnnjNa6mze1v1yByvRvyKCHQdIGA=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412850275,"Id":"e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412863410,"Id":"75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         Less than a second"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
 
         ]'}
     headers:
+      Content-Length: ['659']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:31 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -516,9 +258,11 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-frontend&only_ids=0&all=1
+    uri: http://localhost:4243/v1.12/images/json?only_ids=0&filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-frontend&all=1
   response:
-    body: {string: '[{"Created":1412849860,"Id":"28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4","ParentId":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-frontend:19wEmSvfy18jv8MsLnrr-2ALVc4pGXnDK4tjLghDD0A="],"Size":182,"VirtualSize":560886362}
+    body: {string: '[{"Created":1412861909,"Id":"8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c","ParentId":"c52ef82ce3cc4a52a50ed15dd8aa5bf0d35c5944cde7f12ea6ae047beb841d3c","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-frontend:fUoD4hRPI3tu+BI37Al6AvXSTI8AsWQhg1bwQzUuhgg="],"Size":182,"VirtualSize":560886366}
+
+        ,{"Created":1412849860,"Id":"28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4","ParentId":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-frontend:19wEmSvfy18jv8MsLnrr-2ALVc4pGXnDK4tjLghDD0A="],"Size":182,"VirtualSize":560886362}
 
         ,{"Created":1412698359,"Id":"cdc9f35d0b1fe650faea1efe1c5e1733d7da0fb20a6091cc0d6a1feca5381b34","ParentId":"0721ff57e0ef80b128a79959e2ae86196aaf6cbfdac89b400e6a2d372c2dd192","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-frontend:ohQi+-8NHRCSy0zJBiJVVqRXrBHtxYjPVWrBtWGAhA4="],"Size":182,"VirtualSize":560854608}
 
@@ -555,15 +299,15 @@ interactions:
         ]'}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
-    body: '{"Hostname": "zabbix-frontend-localship", "AttachStderr": true, "NetworkDisabled":
-      false, "Memory": 0, "Tty": false, "StdinOnce": true, "OpenStdin": true, "Image":
-      "registry.ape.yandex.net/nikicat/zabbix-frontend:28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4",
-      "User": "", "MemorySwap": 0, "Env": [], "AttachStdin": true, "ExposedPorts":
-      {"80/tcp": {}}, "AttachStdout": true}'
+    body: '{"ExposedPorts": {"80/tcp": {}}, "OpenStdin": true, "MemorySwap": 0, "NetworkDisabled":
+      false, "Env": [], "Image": "registry.ape.yandex.net/nikicat/zabbix-frontend:8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c",
+      "AttachStdin": true, "User": "", "Tty": false, "Memory": 0, "StdinOnce": true,
+      "Hostname": "zabbix-frontend-localship", "AttachStderr": true, "AttachStdout":
+      true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -574,18 +318,19 @@ interactions:
     method: POST
     uri: http://localhost:4243/v1.12/containers/create?name=.zabbix-frontend
   response:
-    body: {string: '{"Id":"41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35","Warnings":null}
+    body: {string: '{"Id":"c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93","Warnings":null}
 
 '}
     headers:
       Content-Length: ['90']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 201, message: Created}
 - request:
-    body: '{"PortBindings": {"80/tcp": [{"HostPort": "80", "HostIp": "::"}]}, "PublishAllPorts":
-      false, "Privileged": true, "Binds": ["/tmp/config/zabbix-frontend/etc/zabbix:/etc/zabbix:ro",
-      "/tmp/data/zabbix-frontend/var/log/apache2:/var/log/apache2:rw"]}'
+    body: '{"Binds": ["/tmp/data/zabbix-frontend/var/log/apache2:/var/log/apache2:rw",
+      "/tmp/config/zabbix-frontend/etc/zabbix:/etc/zabbix:ro"], "PublishAllPorts":
+      false, "PortBindings": {"80/tcp": [{"HostPort": "80", "HostIp": "::"}]}, "Privileged":
+      true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -594,11 +339,11 @@ interactions:
       Content-Type: [application/json]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.12/containers/41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35/start
+    uri: http://localhost:4243/v1.12/containers/c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93/start
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -608,60 +353,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '[{"Command":"bash /scripts/zabbix.sh","Created":1412850276,"Id":"88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1","Image":"registry.ape.yandex.net/nikicat/zabbix-server:cjLujInmdz2KR22tEVBw6VPeX3RgxnMr94x76lvBUUQ=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"bash /scripts/frontend.sh","Created":1412863412,"Id":"c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:fUoD4hRPI3tu+BI37Al6AvXSTI8AsWQhg1bwQzUuhgg=","Names":["/.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"bash /scripts/frontend.sh","Created":1412850276,"Id":"41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:19wEmSvfy18jv8MsLnrr-2ALVc4pGXnDK4tjLghDD0A=","Names":["/.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"bash /scripts/zabbix.sh","Created":1412863411,"Id":"64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db","Image":"registry.ape.yandex.net/nikicat/zabbix-server:+H7uMgkiBFEiWyoqnnjNa6mze1v1yByvRvyKCHQdIGA=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412850275,"Id":"e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412863410,"Id":"75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         1 seconds"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
 
         ]'}
     headers:
+      Content-Length: ['1018']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -671,14 +378,14 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8/json
+    uri: http://localhost:4243/v1.12/containers/75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a/json
   response:
-    body: {string: '{"Args":["postgres"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["postgres"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/docker-entrypoint.sh"],"Env":["HOME=/","PATH=/usr/lib/postgresql/9.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LANG=en_US.utf8","PG_MAJOR=9.3","PG_VERSION=9.3.5-1.pgdg70+1","PGDATA=/var/lib/postgresql/data"],"ExposedPorts":{"5432/tcp":{}},"Hostname":"postgres-localship","Image":"registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"StdinOnce":true,"Tty":false,"User":"","Volumes":{"/var/lib/postgresql/data":{}},"WorkingDir":""},"Created":"2014-10-09T10:24:35.453640177Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/data/postgres/var/log/postgresql:/var/log/postgresql:rw","/tmp/data/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]},"Privileged":false,"PublishAllPorts":false,"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8/hostname","HostsPath":"/var/lib/docker/containers/e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8/hosts","Id":"e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8","Image":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","MountLabel":"","Name":"/.postgres","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.116","IPPrefixLen":16,"PortMapping":null,"Ports":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]}},"Path":"/docker-entrypoint.sh","ProcessLabel":"","ResolvConfPath":"/etc/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":15970,"Running":true,"StartedAt":"2014-10-09T10:24:35.58783386Z"},"Volumes":{"/var/lib/postgresql/data":"/tmp/data/postgres/var/lib/postgresql/data","/var/log/postgresql":"/tmp/data/postgres/var/log/postgresql"},"VolumesRW":{"/var/lib/postgresql/data":true,"/var/log/postgresql":true}}
+    body: {string: '{"Args":["postgres"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["postgres"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/docker-entrypoint.sh"],"Env":["HOME=/","PATH=/usr/lib/postgresql/9.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LANG=en_US.utf8","PG_MAJOR=9.3","PG_VERSION=9.3.5-1.pgdg70+1","PGDATA=/var/lib/postgresql/data"],"ExposedPorts":{"5432/tcp":{}},"Hostname":"postgres-localship","Image":"registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"StdinOnce":true,"Tty":false,"User":"","Volumes":{"/var/lib/postgresql/data":{}},"WorkingDir":""},"Created":"2014-10-09T14:03:30.931096744Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/data/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw","/tmp/data/postgres/var/log/postgresql:/var/log/postgresql:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]},"Privileged":false,"PublishAllPorts":false,"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a/hostname","HostsPath":"/var/lib/docker/containers/75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a/hosts","Id":"75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a","Image":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","MountLabel":"","Name":"/.postgres","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.139","IPPrefixLen":16,"PortMapping":null,"Ports":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]}},"Path":"/docker-entrypoint.sh","ProcessLabel":"","ResolvConfPath":"/etc/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":2246,"Running":true,"StartedAt":"2014-10-09T14:03:31.057203261Z"},"Volumes":{"/var/lib/postgresql/data":"/tmp/data/postgres/var/lib/postgresql/data","/var/log/postgresql":"/tmp/data/postgres/var/log/postgresql"},"VolumesRW":{"/var/lib/postgresql/data":true,"/var/log/postgresql":true}}
 
 '}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
@@ -698,7 +405,7 @@ interactions:
     headers:
       Content-Length: ['1825']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -717,7 +424,7 @@ interactions:
     headers:
       Content-Length: ['1825']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -727,59 +434,39 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '[{"Command":"bash /scripts/zabbix.sh","Created":1412850276,"Id":"88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1","Image":"registry.ape.yandex.net/nikicat/zabbix-server:cjLujInmdz2KR22tEVBw6VPeX3RgxnMr94x76lvBUUQ=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"bash /scripts/frontend.sh","Created":1412863412,"Id":"c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:fUoD4hRPI3tu+BI37Al6AvXSTI8AsWQhg1bwQzUuhgg=","Names":["/.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"bash /scripts/frontend.sh","Created":1412850276,"Id":"41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:19wEmSvfy18jv8MsLnrr-2ALVc4pGXnDK4tjLghDD0A=","Names":["/.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"bash /scripts/zabbix.sh","Created":1412863411,"Id":"64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db","Image":"registry.ape.yandex.net/nikicat/zabbix-server:+H7uMgkiBFEiWyoqnnjNa6mze1v1yByvRvyKCHQdIGA=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412850275,"Id":"e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412863410,"Id":"75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         1 seconds"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
 
         ]'}
     headers:
+      Content-Length: ['1018']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
+    method: GET
+    uri: http://localhost:4243/v1.12/containers/64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db/json
+  response:
+    body: {string: '{"Args":["/scripts/zabbix.sh"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["bash","/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"zabbix-backend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-server:ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"StdinOnce":true,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-10-09T14:03:31.601950966Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/config/zabbix-backend/etc/zabbix:/etc/zabbix:ro","/tmp/data/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]},"Privileged":true,"PublishAllPorts":false,"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db/hostname","HostsPath":"/var/lib/docker/containers/64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db/hosts","Id":"64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db","Image":"ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea","MountLabel":"","Name":"/.zabbix-backend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.140","IPPrefixLen":16,"PortMapping":null,"Ports":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]}},"Path":"bash","ProcessLabel":"","ResolvConfPath":"/etc/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":2278,"Running":true,"StartedAt":"2014-10-09T14:03:31.780271395Z"},"Volumes":{"/etc/zabbix":"/tmp/config/zabbix-backend/etc/zabbix","/var/log/zabbix":"/tmp/data/zabbix-backend/var/log/zabbix"},"VolumesRW":{"/etc/zabbix":false,"/var/log/zabbix":true}}
+
+'}
+    headers:
+      Content-Type: [application/json]
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
@@ -790,15 +477,16 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1/json
+    uri: http://localhost:4243/v1.12/images/ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea/json
   response:
-    body: {string: '{"Args":["/scripts/zabbix.sh"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"zabbix-backend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-server:27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"StdinOnce":true,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-10-09T10:24:36.036921872Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/config/zabbix-backend/etc/zabbix:/etc/zabbix:ro","/tmp/data/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]},"Privileged":true,"PublishAllPorts":false,"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1/hostname","HostsPath":"/var/lib/docker/containers/88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1/hosts","Id":"88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1","Image":"27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e","MountLabel":"","Name":"/.zabbix-backend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.117","IPPrefixLen":16,"PortMapping":null,"Ports":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]}},"Path":"bash","ProcessLabel":"","ResolvConfPath":"/etc/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":15998,"Running":true,"StartedAt":"2014-10-09T10:24:36.214514645Z"},"Volumes":{"/etc/zabbix":"/tmp/config/zabbix-backend/etc/zabbix","/var/log/zabbix":"/tmp/data/zabbix-backend/var/log/zabbix"},"VolumesRW":{"/etc/zabbix":false,"/var/log/zabbix":true}}
+    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["bash","/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"39ae662440738e2c543f0810dedc0a993cc5d7af5df6e7e5f6080caff2b3991d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"e6fb61ae8853008f400b9e155c39f98f8923be3d2e35020969b48dc6d53dc660","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
+        ADD  in /scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"39ae662440738e2c543f0810dedc0a993cc5d7af5df6e7e5f6080caff2b3991d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-10-09T13:57:38.639499749Z","DockerVersion":"1.1.2-dev","Id":"ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea","Os":"linux","Parent":"39ae662440738e2c543f0810dedc0a993cc5d7af5df6e7e5f6080caff2b3991d","Size":382}
 
 '}
     headers:
+      Content-Length: ['1694']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -808,16 +496,16 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/images/27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e/json
+    uri: http://localhost:4243/v1.12/images/ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea/json
   response:
-    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
-        ADD  in /scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-10-09T10:17:15.8364681Z","DockerVersion":"1.1.2-dev","Id":"27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e","Os":"linux","Parent":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","Size":168}
+    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["bash","/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"39ae662440738e2c543f0810dedc0a993cc5d7af5df6e7e5f6080caff2b3991d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"e6fb61ae8853008f400b9e155c39f98f8923be3d2e35020969b48dc6d53dc660","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
+        ADD  in /scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"39ae662440738e2c543f0810dedc0a993cc5d7af5df6e7e5f6080caff2b3991d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-10-09T13:57:38.639499749Z","DockerVersion":"1.1.2-dev","Id":"ccfc0a9064172dab455213a33950b06bb47be9cdd1a52188f0424ba00bb84bea","Os":"linux","Parent":"39ae662440738e2c543f0810dedc0a993cc5d7af5df6e7e5f6080caff2b3991d","Size":382}
 
 '}
     headers:
-      Content-Length: ['1693']
+      Content-Length: ['1694']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -827,78 +515,39 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/images/27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e/json
+    uri: http://localhost:4243/v1.12/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
   response:
-    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
-        ADD  in /scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-10-09T10:17:15.8364681Z","DockerVersion":"1.1.2-dev","Id":"27491aa14942b793b7095c402bde0b9693b9b39257f07737703ede0cb2d0db2e","Os":"linux","Parent":"808f8bd28d34b6d2859b16ef48cbaac7375349dadbf966fe100c398817f07d2d","Size":168}
-
-'}
-    headers:
-      Content-Length: ['1693']
-      Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
-    status: {code: 200, message: OK}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
-    method: GET
-    uri: http://localhost:4243/v1.12/containers/json?trunc_cmd=1&size=0&limit=-1&all=1
-  response:
-    body: {string: '[{"Command":"bash /scripts/zabbix.sh","Created":1412850276,"Id":"88997af3b4fbe6617739a628eb8df8d5c3ec274fea8330cd471ecd73d2f9ced1","Image":"registry.ape.yandex.net/nikicat/zabbix-server:cjLujInmdz2KR22tEVBw6VPeX3RgxnMr94x76lvBUUQ=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"bash /scripts/frontend.sh","Created":1412863412,"Id":"c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:fUoD4hRPI3tu+BI37Al6AvXSTI8AsWQhg1bwQzUuhgg=","Names":["/.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"bash /scripts/frontend.sh","Created":1412850276,"Id":"41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:19wEmSvfy18jv8MsLnrr-2ALVc4pGXnDK4tjLghDD0A=","Names":["/.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"bash /scripts/zabbix.sh","Created":1412863411,"Id":"64b65883b3ecdbd8ca855972c3e2018fae5a3cde9054091eee12ecc9bb7697db","Image":"registry.ape.yandex.net/nikicat/zabbix-server:+H7uMgkiBFEiWyoqnnjNa6mze1v1yByvRvyKCHQdIGA=","Names":["/.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412850275,"Id":"e355daac2141cfb2c17f513be84aa4dab52276464ca8b3a5f42931b9d52804a8","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1412863410,"Id":"75794e9b79af70f7c17ee36ac5efe035ef6c895a87106ec0bfbe73d5c9dce29a","Image":"postgres:9","Names":["/.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         1 seconds"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"e08ce63bf82fe289419f38465bcc0df0c416d092577b860e21fd0d7b8586e713","Image":"88169ce46ff6","Names":["/condescending_meitner"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/frontend.sh''","Created":1412849859,"Id":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","Image":"f25da689fbc6","Names":["/nostalgic_elion"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''chmod go+rx /etc/zabbix''","Created":1412849858,"Id":"8d56f8fc9224e9346c6c71c3f4b81bf44a3418c0ad3d6cacc0c25a66d66816cc","Image":"15f1b8815c32","Names":["/kickass_heisenberg"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''apt-get install -y zabbix-frontend-php apache2 php5-pgsql''","Created":1412849838,"Id":"0428c42c796e2b97e2e258ced637317994cfdbdea380896a1c9cf9f88a6238cb","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/suspicious_turing"],"Ports":[],"Status":"Exited
-        (0) 6 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"180d1336f2f6d4962ddfd8ddb7a425d64e925e699f5797dba50975e81e5a4f26","Image":"808f8bd28d34","Names":["/happy_mclean"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849835,"Id":"99acf18e3f8e96c5e9dcf7bc378f8c390fea0474bde3c83c6ea65971e1d92f62","Image":"88cd4f01619b","Names":["/clever_franklin"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"3b103daf3b664a02f497876b075b2b426929cb368162c7f37a95fd26e007386b","Image":"6c769a4f3e41","Names":["/compassionate_bell"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849834,"Id":"4a7a3a89d16a9d8940d135ef28b5cc41b53dc1b21d9ea3e216fd32869927d335","Image":"c282bb4cb698","Names":["/prickly_morse"],"Ports":[],"Status":""}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ADD  in /scripts/zabbix.sh''","Created":1412849833,"Id":"d6020bad7fde3d69aabc586ff38e9063604d685a8a8e8c743b2ce05c6fac0ec4","Image":"96eb728a1df3","Names":["/cocky_galileo"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''DEBIAN_FRONTEND=noninteractive apt-get install -y
-        zabbix-server-pgsql strace snmp-mibs-downloader fping nmap''","Created":1412849796,"Id":"84a26b6ba962fef1c683879f8acff194623da6d57c8013774ffda64619453549","Image":"registry.ape.yandex.net/nikicat/zabbix:VkaxsqDGLQxRWTEQuy5YVIo4K0ORo7jFDnQQv8CiPbo=","Names":["/hopeful_brown"],"Ports":[],"Status":"Exited
-        (0) 7 minutes ago"}
-
-        ,{"Command":"bash /bin/sh -c ''#(nop) ENTRYPOINT [bash]''","Created":1412849793,"Id":"eb1842037e409007f676ff6e7b73f0d95e6099a7074dc7dac8a9970d5ce92bb8","Image":"8f9b6052d27c","Names":["/boring_nobel"],"Ports":[],"Status":""}
-
-        ,{"Command":"/bin/sh -c ''apt-get update''","Created":1412849786,"Id":"1f702ab70c1a9795cb7fe46fa111acb2975ba05e2183280a15c2c7c0ee549d90","Image":"6b19d95045b0","Names":["/suspicious_lovelace"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''dpkg -i zabbix-release_2.4-1+trusty_all.deb''","Created":1412849786,"Id":"d43186987e600ddc8f651909e39b75a2b771e1621bd0cbd2795079f4c816896b","Image":"1b7918eefda1","Names":["/sick_sinoussi"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"/bin/sh -c ''wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb''","Created":1412849785,"Id":"43a24594f152f634e5b9cccf21cc10fbd81dc7e639f59882dfc7f03c4b414a8d","Image":"nbryskin/trusty:latest","Names":["/sleepy_hypatia"],"Ports":[],"Status":"Exited
-        (0) 8 minutes ago"}
-
-        ,{"Command":"bash /scripts/jenkins.sh","Created":1412845205,"Id":"048277c3612342c84a6b5715b62796f12541e7d65322c764d2ca926760be7508","Image":"registry.ape.yandex.net/nikicat/jenkins:36NwC97CaLLJcp7EYV67U3RVSmfPQ2dSf-WsbOiJcSY=","Names":["/default.jenkins"],"Ports":[{"IP":"::","PrivatePort":50000,"PublicPort":50099,"Type":"tcp"},{"IP":"::","PrivatePort":8080,"PublicPort":10080,"Type":"tcp"}],"Status":"Up
-        About an hour"}
 
         ]'}
     headers:
+      Content-Length: ['1018']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
+    method: GET
+    uri: http://localhost:4243/v1.12/containers/c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93/json
+  response:
+    body: {string: '{"Args":["/scripts/frontend.sh"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["bash","/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"80/tcp":{}},"Hostname":"zabbix-frontend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"StdinOnce":true,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-10-09T14:03:32.300254658Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/data/zabbix-frontend/var/log/apache2:/var/log/apache2:rw","/tmp/config/zabbix-frontend/etc/zabbix:/etc/zabbix:ro"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]},"Privileged":true,"PublishAllPorts":false,"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93/hostname","HostsPath":"/var/lib/docker/containers/c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93/hosts","Id":"c1fd5002df61fb3a9794dd155467e1bd68d830da3e7be31a714b1b0850c8fa93","Image":"8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c","MountLabel":"","Name":"/.zabbix-frontend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.141","IPPrefixLen":16,"PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]}},"Path":"bash","ProcessLabel":"","ResolvConfPath":"/etc/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":2304,"Running":true,"StartedAt":"2014-10-09T14:03:32.478712143Z"},"Volumes":{"/etc/zabbix":"/tmp/config/zabbix-frontend/etc/zabbix","/var/log/apache2":"/tmp/data/zabbix-frontend/var/log/apache2"},"VolumesRW":{"/etc/zabbix":false,"/var/log/apache2":true}}
+
+'}
+    headers:
+      Content-Type: [application/json]
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
@@ -909,15 +558,16 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/containers/41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35/json
+    uri: http://localhost:4243/v1.12/images/8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c/json
   response:
-    body: {string: '{"Args":["/scripts/frontend.sh"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"80/tcp":{}},"Hostname":"zabbix-frontend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"StdinOnce":true,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-10-09T10:24:36.694308915Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/config/zabbix-frontend/etc/zabbix:/etc/zabbix:ro","/tmp/data/zabbix-frontend/var/log/apache2:/var/log/apache2:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]},"Privileged":true,"PublishAllPorts":false,"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35/hostname","HostsPath":"/var/lib/docker/containers/41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35/hosts","Id":"41fd5c331b7f4e5727a594d3394612795d599bd27846abd40cf4ea9d5b100d35","Image":"28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4","MountLabel":"","Name":"/.zabbix-frontend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.118","IPPrefixLen":16,"PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]}},"Path":"bash","ProcessLabel":"","ResolvConfPath":"/etc/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":16025,"Running":true,"StartedAt":"2014-10-09T10:24:36.822733416Z"},"Volumes":{"/etc/zabbix":"/tmp/config/zabbix-frontend/etc/zabbix","/var/log/apache2":"/tmp/data/zabbix-frontend/var/log/apache2"},"VolumesRW":{"/etc/zabbix":false,"/var/log/apache2":true}}
+    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["bash","/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"c52ef82ce3cc4a52a50ed15dd8aa5bf0d35c5944cde7f12ea6ae047beb841d3c","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Container":"105393c4cf4056c02d632b879e4c4204fa900943034644ddab0afc7a275bcdcf","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
+        ADD  in /scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"c52ef82ce3cc4a52a50ed15dd8aa5bf0d35c5944cde7f12ea6ae047beb841d3c","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-10-09T13:38:29.590073592Z","DockerVersion":"1.1.2-dev","Id":"8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c","Os":"linux","Parent":"c52ef82ce3cc4a52a50ed15dd8aa5bf0d35c5944cde7f12ea6ae047beb841d3c","Size":182}
 
 '}
     headers:
+      Content-Length: ['1604']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
-      Transfer-Encoding: [chunked]
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -927,34 +577,15 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.12/images/28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4/json
+    uri: http://localhost:4243/v1.12/images/8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c/json
   response:
-    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Container":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
-        ADD  in /scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-10-09T10:17:40.002731151Z","DockerVersion":"1.1.2-dev","Id":"28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4","Os":"linux","Parent":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","Size":182}
+    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["bash","/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"c52ef82ce3cc4a52a50ed15dd8aa5bf0d35c5944cde7f12ea6ae047beb841d3c","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Container":"105393c4cf4056c02d632b879e4c4204fa900943034644ddab0afc7a275bcdcf","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
+        ADD  in /scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"c52ef82ce3cc4a52a50ed15dd8aa5bf0d35c5944cde7f12ea6ae047beb841d3c","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-10-09T13:38:29.590073592Z","DockerVersion":"1.1.2-dev","Id":"8912a2a8a44f2e3e356c8edb987cd4f8eaf4459df463560f701acf6fad690f7c","Os":"linux","Parent":"c52ef82ce3cc4a52a50ed15dd8aa5bf0d35c5944cde7f12ea6ae047beb841d3c","Size":182}
 
 '}
     headers:
-      Content-Length: ['1605']
+      Content-Length: ['1604']
       Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
-    status: {code: 200, message: OK}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.4.3 CPython/3.4.1 Linux/3.15.7-1-aufs_friendly]
-    method: GET
-    uri: http://localhost:4243/v1.12/images/28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4/json
-  response:
-    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Container":"8060c55227b5d5ba2f05b48412cdf65702123df39648e9ca8ee7dffd499f5059","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
-        ADD  in /scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["bash"],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":null,"Hostname":"9818fcbe520e","Image":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-10-09T10:17:40.002731151Z","DockerVersion":"1.1.2-dev","Id":"28f4726fba7567e0c6364448be280a608952b93ac343487872736788327fb8d4","Os":"linux","Parent":"f25da689fbc6d91253ae591c8ce48898b9e2b0bbf9e374410af0ae2ebba4b699","Size":182}
-
-'}
-    headers:
-      Content-Length: ['1605']
-      Content-Type: [application/json]
-      Date: ['Thu, 09 Oct 2014 10:24:36 GMT']
+      Date: ['Thu, 09 Oct 2014 14:03:32 GMT']
     status: {code: 200, message: OK}
 version: 1
