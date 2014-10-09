@@ -16,8 +16,11 @@ zabbix-release/zabbix-release_2.4-1+trusty_all.deb',
             'dpkg -i zabbix-release_2.4-1+trusty_all.deb',
             'apt-get update',
         ],
-        entrypoint=['bash'],
     )
+
+
+def make_config_file(config):
+    return '\n'.join(['{}={}'.format(key, value) for key, value in config.items()])
 
 
 @cached
@@ -38,7 +41,7 @@ def make_server_image():
             'logs': '/var/log/zabbix',
             'config': '/etc/zabbix'
         },
-        command=['/scripts/zabbix.sh'],
+        command='bash /scripts/zabbix.sh',
     )
 
 
@@ -53,7 +56,7 @@ def make():
         files={
             '/scripts/frontend.sh': resource_string('frontend.sh'),
         },
-        command=['/scripts/frontend.sh'],
+        command='bash /scripts/frontend.sh',
     )
 
     postgres_image = SourceImage(
@@ -81,18 +84,57 @@ def make():
             'logs': LogVolume(
                 dest='/var/log/zabbix',
                 files={
-                    'zabbix_server.log': LogFile()
+                    'zabbix_server.log': LogFile(),
+                    'snmptt.log': LogFile(),
                 },
             ),
             'config': ConfigVolume(
                 dest='/etc/zabbix',
-                files={'zabbix_server.conf': TemplateFile(
-                    resource_string('zabbix_server.conf'),
-                    postgres=postgres,
-                )},
+                files={'zabbix_server.conf': None},
             ),
         },
     )
+
+    def make_zabbix_server_conf(backend=backend, postgres=postgres):
+        logfiles = backend.volumes['logs'].files
+        config = {
+            'LogFile': logfiles['zabbix_server.log'].fulldest,
+            'LogFileSize': 0,
+            'PidFile': '/var/run/zabbix_server.pid',
+            'DBHost': postgres.ship.fqdn,
+            'DBName': 'zabbix',
+            'DBUser': 'postgres',
+            'DBPassword': '',
+            'DBPort': postgres.doors['postgres'].port,
+            'StartPollers': 1,
+            'StartIPMIPollers': 1,
+            'StartTrappers': 1,
+            'JavaGateway': '127.0.0.1',
+            'StartJavaPollers': 1,
+            'StartVMwareCollectors': 1,
+            'VMwareFrequency': 10,
+            'VMwareCacheSize': '256K',
+            'SNMPTrapperFile': logfiles['snmptt.log'].fulldest,
+            'SenderFrequency': 10,
+            'CacheUpdateFrequency': 10,
+            'StartDBSyncers': 1,
+            'HistoryCacheSize': '2G',
+            'TrendCacheSize': '2G',
+            'HistoryTextCacheSize': '2G',
+            'ValueCacheSize': '2G',
+            'Timeout': 30,
+            'UnreachablePeriod': 10,
+            'UnavailableDelay': 10,
+            'UnreachableDelay': 10,
+            'AlertScriptsPath': '/usr/lib/zabbix/alertscripts',
+            'ExternalScripts': '/usr/lib/zabbix/externalscripts',
+            'ProxyConfigFrequency': 10,
+            'AllowRoot': 1,
+        }
+
+        return TextFile('\n'.join(['{}={}'.format(key, value) for key, value in config.items()]))
+
+    backend.volumes['config'].files['zabbix_server.conf'] = make_zabbix_server_conf
 
     frontend = Container(
         name='zabbix-frontend',

@@ -13,7 +13,6 @@ if __name__ == '__main__':
         packages=['obedient.zabbix'],
         namespace_packages=['obedient'],
         package_data={'obedient.zabbix': [
-            'zabbix_server.conf',
             'apache.conf',
             'zabbix.conf.php',
             'frontend.sh',
