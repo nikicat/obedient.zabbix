@@ -1,5 +1,5 @@
 from textwrap import dedent
-from dominator.utils import resource_string, cached
+from dominator.utils import resource_string, resource_stream, cached
 from dominator.entities import (SourceImage, Image, DataVolume, ConfigVolume, TemplateFile,
                                 Container, LogVolume, Url,
                                 Shipment, Door, TextFile, LogFile, Task)
@@ -35,13 +35,14 @@ def make_server_image():
             'ln -fs /usr/bin/fping /usr/sbin/',
         ],
         files={
-            '/scripts/zabbix.sh': resource_string('zabbix.sh'),
+            '/scripts/zabbix.sh': resource_stream('zabbix.sh'),
+            '/usr/lib/zabbix/alertscripts/golem-alert-handler.sh': resource_stream('golem-alert-handler.sh'),
         },
         volumes={
             'logs': '/var/log/zabbix',
-            'config': '/etc/zabbix'
+            'config': '/etc/zabbix',
         },
-        command='bash /scripts/zabbix.sh',
+        command=['/scripts/zabbix.sh'],
     )
 
 
@@ -54,9 +55,9 @@ def make():
             'chmod go+rx /etc/zabbix',
         ],
         files={
-            '/scripts/frontend.sh': resource_string('frontend.sh'),
+            '/scripts/frontend.sh': resource_stream('frontend.sh'),
         },
-        command='bash /scripts/frontend.sh',
+        command=['/scripts/frontend.sh'],
     )
 
     postgres_image = SourceImage(

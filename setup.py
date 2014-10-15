@@ -17,11 +17,12 @@ if __name__ == '__main__':
             'zabbix.conf.php',
             'frontend.sh',
             'zabbix.sh',
+            'golem-alert-handler.sh',
         ]},
         entry_points={'obedient': [
             'create = obedient.zabbix:create',
         ]},
         install_requires=[
-            'dominator[full] >=11.6',
+            'dominator[full] >=12.0',
         ],
     )
