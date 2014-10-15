@@ -132,7 +132,7 @@ def make():
             'AllowRoot': 1,
         }
 
-        return TextFile('\n'.join(['{}={}'.format(key, value) for key, value in config.items()]))
+        return TextFile('\n'.join(['{}={}'.format(key, value) for key, value in sorted(config.items())]))
 
     backend.volumes['config'].files['zabbix_server.conf'] = make_zabbix_server_conf
 
