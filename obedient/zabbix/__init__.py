@@ -204,17 +204,14 @@ def make_db_task(name, script):
     )
 
 
-def create(ships):
-    allcontainers = []
-    alltasks = []
-    for ship in ships:
+def create_zabbix(shipment):
+    for ship in shipment.ships.values():
         containers, tasks = make()
         for cont in containers:
             ship.place(cont)
         ship.containers['zabbix-backend'].doors['zabbix-trapper'].expose(10051)
         ship.containers['zabbix-frontend'].doors['http'].expose(80)
-        ship.expose_all(range(15000, 16000))
 
-        allcontainers.extend(containers)
-        alltasks.extend(alltasks)
-    return Shipment(name='', containers=allcontainers, tasks=alltasks)
+        shipment.tasks.update({task.name: task for task in tasks})
+
+    shipment.expose_ports(range(15000, 16000))
