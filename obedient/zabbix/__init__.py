@@ -2,7 +2,7 @@ from textwrap import dedent
 from dominator.utils import resource_string, resource_stream, cached
 from dominator.entities import (SourceImage, Image, DataVolume, ConfigVolume, TemplateFile,
                                 Container, LogVolume, Url,
-                                Shipment, Door, TextFile, LogFile, Task)
+                                Door, TextFile, LogFile, Task)
 
 
 @cached
@@ -13,8 +13,7 @@ def make_zabbix_image():
         scripts=[
             'wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/\
 zabbix-release/zabbix-release_2.4-1+trusty_all.deb',
-            'dpkg -i zabbix-release_2.4-1+trusty_all.deb',
-            'apt-get update',
+            'dpkg -i zabbix-release_2.4-1+trusty_all.deb && apt-get update',
         ],
     )
 
@@ -23,35 +22,13 @@ def make_config_file(config):
     return '\n'.join(['{}={}'.format(key, value) for key, value in config.items()])
 
 
-@cached
-def make_server_image():
-    return SourceImage(
-        name='zabbix-server',
-        parent=make_zabbix_image(),
-        ports={'zabbix-trapper': 10051},
-        scripts=[
-            'DEBIAN_FRONTEND=noninteractive apt-get install -y zabbix-server-pgsql '
-            'strace snmp-mibs-downloader fping nmap',
-            'ln -fs /usr/bin/fping /usr/sbin/',
-        ],
-        files={
-            '/scripts/zabbix.sh': resource_stream('zabbix.sh'),
-            '/usr/lib/zabbix/alertscripts/golem-alert-handler.sh': resource_stream('golem-alert-handler.sh'),
-        },
-        volumes={
-            'logs': '/var/log/zabbix',
-            'config': '/etc/zabbix',
-        },
-        command=['/scripts/zabbix.sh'],
-    )
-
-
-def make():
+def make(version='1:2.4.1-1+trusty'):
     frontend_image = SourceImage(
         name='zabbix-frontend',
         parent=make_zabbix_image(),
         scripts=[
-            'apt-get install -y zabbix-frontend-php apache2 php5-pgsql',
+            'apt-get update && '
+            'apt-get install -y zabbix-frontend-php={version} apache2 php5-pgsql'.format(version=version),
             'chmod go+rx /etc/zabbix',
         ],
         files={
@@ -75,6 +52,29 @@ def make():
             # 'config': ConfigVolume(dest='/etc/postgresql'),
         },
     )
+
+    @cached
+    def make_server_image():
+        return SourceImage(
+            name='zabbix-server',
+            parent=make_zabbix_image(),
+            ports={'zabbix-trapper': 10051},
+            scripts=[
+                'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ' +
+                'zabbix-server-pgsql={version} '.format(version=version) +
+                'strace snmp-mibs-downloader fping nmap',
+                'ln -fs /usr/bin/fping /usr/sbin/',
+            ],
+            files={
+                '/scripts/zabbix.sh': resource_stream('zabbix.sh'),
+                '/usr/lib/zabbix/alertscripts/golem-alert-handler.sh': resource_stream('golem-alert-handler.sh'),
+            },
+            volumes={
+                'logs': '/var/log/zabbix',
+                'config': '/etc/zabbix',
+            },
+            command=['/scripts/zabbix.sh'],
+        )
 
     backend = Container(
         name='zabbix-backend',
@@ -169,6 +169,19 @@ def make():
         },
     )
 
+    def make_db_task(name, script):
+        return Task(
+            name=name,
+            image=make_server_image(),
+            volumes={
+                'scripts': ConfigVolume(
+                    dest='/scripts',
+                    files={'run.sh': script}
+                ),
+            },
+            command=['/scripts/run.sh'],
+        )
+
     def make_reinit_script():
         return TextFile(dedent('''#!/bin/bash
             cmd='psql -U postgres -h {door.host} -p {door.port}'
@@ -188,20 +201,6 @@ def make():
     restore = make_db_task('restore', make_restore_script)
 
     return [postgres, frontend, backend], [reinit, dump, restore]
-
-
-def make_db_task(name, script):
-    return Task(
-        name=name,
-        image=make_server_image(),
-        volumes={
-            'scripts': ConfigVolume(
-                dest='/scripts',
-                files={'run.sh': script}
-            ),
-        },
-        command=['/scripts/run.sh'],
-    )
 
 
 def create_zabbix(shipment):

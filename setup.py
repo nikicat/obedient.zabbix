@@ -20,9 +20,9 @@ if __name__ == '__main__':
             'golem-alert-handler.sh',
         ]},
         entry_points={'obedient': [
-            'create = obedient.zabbix:create',
+            'create = obedient.zabbix:create_zabbix',
         ]},
         install_requires=[
-            'dominator[full] >=12.0',
+            'dominator[full] >=13.1a',
         ],
     )
