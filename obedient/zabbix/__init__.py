@@ -204,6 +204,7 @@ def make(version='1:2.4.1-1+trusty'):
 
 
 def create_zabbix(shipment):
+    shipment.unload_ships()
     for ship in shipment.ships.values():
         containers, tasks = make()
         for cont in containers:
