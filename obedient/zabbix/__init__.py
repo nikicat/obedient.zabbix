@@ -87,6 +87,7 @@ def make(version='1:2.4.1-1+trusty'):
                 files={
                     'zabbix_server.log': LogFile(),
                     'snmptt.log': LogFile(),
+                    'golem-alert.log': LogFile(),
                 },
             ),
             'config': ConfigVolume(
@@ -95,6 +96,8 @@ def make(version='1:2.4.1-1+trusty'):
             ),
         },
     )
+    # This variable is needed for golem-alert-handler.sh script
+    backend.env['GOLEM_ALERT_LOG'] = backend.volumes['logs'].files['golem-alert.log'].fulldest
 
     def make_zabbix_server_conf(backend=backend, postgres=postgres):
         logfiles = backend.volumes['logs'].files
