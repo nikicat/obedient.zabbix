@@ -7,13 +7,13 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
     body: {string: '[]'}
     headers:
       Content-Length: ['2']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:22 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:31 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -23,13 +23,13 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
     body: {string: '[]'}
     headers:
       Content-Length: ['2']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:22 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:31 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -39,13 +39,13 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
     body: {string: '[]'}
     headers:
       Content-Length: ['2']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:22 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:31 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -55,13 +55,13 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
     body: {string: '[]'}
     headers:
       Content-Length: ['2']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:22 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:31 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -71,21 +71,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fpostgres&only_ids=0&all=1
+    uri: http://localhost:4243/v1.15/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fpostgres&all=1&only_ids=0
   response:
-    body: {string: '[{"Created":1408373284,"Id":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","ParentId":"d221d3d8f66356809c4f2c445e4649ecc33d6e1e03e7efb20edeaaae13b81022","RepoTags":["registry.ape.yandex.net/nikicat/postgres:irbJztDdAEFBu9W2UQfdsu-eNx9p4emcNlSnGyL2hBc.","registry.ape.yandex.net/nikicat/postgres:japvRfJBfL3nz73mcoDMlwRnKJOSkZ7lq-lk9qc1JEk=","registry.ape.yandex.net/nikicat/postgres:wR2hDNsTsdu10fPsXXfWdHt-MnswgCWTPHMoxx67qG4=","registry.ape.yandex.net/nikicat/postgres:13ph8Xt6dC0MWVfZLz1BTnLb3AXPo+gHtZChnOICwBA=","registry.ape.yandex.net/nikicat/postgres:dXbDT80YJDS8yrkTFfma8YxAJ5d6SXHXxyGB+ZFbna8=","registry.ape.yandex.net/nikicat/postgres:iZ55qn26Be1heMSyZnlygZZyQJe1JBT76L-xP7MBBic="],"Size":0,"VirtualSize":213094997}
+    body: {string: '[{"Created":1408373284,"Id":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","ParentId":"d221d3d8f66356809c4f2c445e4649ecc33d6e1e03e7efb20edeaaae13b81022","RepoTags":["registry.ape.yandex.net/nikicat/postgres:kHq_QWoy2BXBiquNL8Z8zXsqJAI.","registry.ape.yandex.net/nikicat/postgres:wR2hDNsTsdu10fPsXXfWdHt-MnswgCWTPHMoxx67qG4=","registry.ape.yandex.net/nikicat/postgres:13ph8Xt6dC0MWVfZLz1BTnLb3AXPo+gHtZChnOICwBA=","registry.ape.yandex.net/nikicat/postgres:dXbDT80YJDS8yrkTFfma8YxAJ5d6SXHXxyGB+ZFbna8=","registry.ape.yandex.net/nikicat/postgres:iZ55qn26Be1heMSyZnlygZZyQJe1JBT76L-xP7MBBic=","registry.ape.yandex.net/nikicat/postgres:irbJztDdAEFBu9W2UQfdsu-eNx9p4emcNlSnGyL2hBc.","registry.ape.yandex.net/nikicat/postgres:japvRfJBfL3nz73mcoDMlwRnKJOSkZ7lq-lk9qc1JEk="],"Size":0,"VirtualSize":213094997}
 
         ]'}
     headers:
-      Content-Length: ['749']
+      Content-Length: ['821']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:23 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:32 GMT']
     status: {code: 200, message: OK}
 - request:
-    body: '{"Hostname": "postgres-localship", "AttachStdout": true, "User": "", "OpenStdin":
-      true, "AttachStderr": true, "Tty": true, "Image": "registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23",
-      "Env": [], "StdinOnce": true, "AttachStdin": true, "Memory": 0, "ExposedPorts":
-      {"5432/tcp": {}}, "MemorySwap": 0, "NetworkDisabled": false}'
+    body: '{"Env": [], "StdinOnce": true, "Tty": true, "Memory": 0, "ExposedPorts":
+      {"5432/tcp": {}}, "AttachStderr": true, "OpenStdin": true, "MemorySwap": 0,
+      "Image": "registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23",
+      "User": "", "AttachStdin": true, "Hostname": "postgres-localship", "NetworkDisabled":
+      false, "AttachStdout": true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -96,18 +97,18 @@ interactions:
     method: POST
     uri: http://localhost:4243/v1.15/containers/create?name=unnamed.postgres
   response:
-    body: {string: '{"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Warnings":null}
+    body: {string: '{"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Warnings":null}
 
 '}
     headers:
       Content-Length: ['90']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:23 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:32 GMT']
     status: {code: 201, message: Created}
 - request:
-    body: '{"PortBindings": {"5432/tcp": [{"HostIp": "::", "HostPort": "15999"}]},
-      "PublishAllPorts": false, "Privileged": false, "Binds": ["/tmp/data/unnamed/postgres/var/log/postgresql:/var/log/postgresql:rw",
-      "/tmp/data/unnamed/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw"]}'
+    body: '{"Privileged": false, "PortBindings": {"5432/tcp": [{"HostPort": "15999",
+      "HostIp": "::"}]}, "PublishAllPorts": false, "Binds": ["/tmp/data/unnamed/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw",
+      "/tmp/data/unnamed/postgres/var/log/postgresql:/var/log/postgresql:rw"]}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -116,11 +117,11 @@ interactions:
       Content-Type: [application/json]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.15/containers/9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c/start
+    uri: http://localhost:4243/v1.15/containers/d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d/start
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 06 Nov 2014 15:02:23 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:32 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -130,16 +131,16 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
         ]'}
     headers:
       Content-Length: ['297']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:23 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:32 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -149,9 +150,25 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-server&only_ids=0&all=1
+    uri: http://localhost:4243/v1.15/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-server&all=1&only_ids=0
   response:
-    body: {string: '[{"Created":1415282822,"Id":"6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic."],"Size":0,"VirtualSize":632690075}
+    body: {string: '[{"Created":1415357936,"Id":"3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM."],"Size":1432,"VirtualSize":632691507}
+
+        ,{"Created":1415356407,"Id":"55d4904fd57f9c3668107fbd0984541101f1a7c5f2a9d33f1f7c43d8159c3f7e","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:CzDa_1TGOg2pzz-lgWJsNOdbpvY."],"Size":1420,"VirtualSize":632691495}
+
+        ,{"Created":1415306297,"Id":"7eb032abe7addd9399e85fb74b5c826b6c42fb3243ba1c5c00129fa0e01052b6","ParentId":"a3362866284a9ddef192a8e8c6d66cb61bb69c02f1ab9509e59c52dfec2f756d","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:LiJi5_fp5n_vjXv4gUaNqazNXtk9CFu6iLK_vUkaoKg."],"Size":382,"VirtualSize":632691237}
+
+        ,{"Created":1415305873,"Id":"dfdd26ae26cfa7428e19a7b0a37fb71b30e861812df243b43584ac6196f41934","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:lQiayIdXIvRrZjSGoGc7TAiQ3HoyI1fFGATHYzOs05A."],"Size":1067,"VirtualSize":632691142}
+
+        ,{"Created":1415305367,"Id":"d58472dacce7e3f56b3e0e537705cbdf7fb3b99eeeb2238fb5c20dabbbff4c41","ParentId":"fd2e9065cc1c06dceb22e0d3d1d6cbdd40f8298655b6c2a88c6fc279230bb14a","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:iAfGc8lJmcMtfjAH0PBP9GxvvoBzdPDM0KHMJYINBME."],"Size":382,"VirtualSize":632691141}
+
+        ,{"Created":1415303704,"Id":"21b49cbfcf12648ce9427e5621c70754adade95bd287abd32dab85e1062235f6","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:Fg_AvlYmFkKrzOcVuM9N_Ra19xGt7d0OAggp40WdDak."],"Size":744,"VirtualSize":632690819}
+
+        ,{"Created":1415293822,"Id":"cccaaae17ab3adad86163a4455a126dc9d3644f8d64fad384ce51b8abcb16c09","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:tgbXgnvDFA6iIH8jXmJ_ChCebXBXP4SXfcuPvqOHc0Q."],"Size":733,"VirtualSize":632690808}
+
+        ,{"Created":1415292892,"Id":"16b024ed2757779a3280c496923cae138743fcc3fc66cc6de481b5a9adbe8f0d","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:rnKa2IFAABmE0tsM-8oWpkwQOiBcyIPHcUBlg4ffKdk."],"Size":701,"VirtualSize":632690776}
+
+        ,{"Created":1415282822,"Id":"6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7","ParentId":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic."],"Size":0,"VirtualSize":632690075}
 
         ,{"Created":1413543954,"Id":"3b940efa9e398adeb4c175a12d4d20e4b5cd22a78ee4e060b95d4f85425a3ee6","ParentId":"b479aa9a88322687e96518b14ee93cfb4a0a88e4ae051b6c0d53dfb2995acd3a","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-server:WWYm5Dy+uBmYJbec7S5UsMD+nRcgJvfOl5ETQlzlOgE="],"Size":0,"VirtualSize":632690075}
 
@@ -194,36 +211,37 @@ interactions:
         ]'}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:24 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:33 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
-    body: '{"Hostname": "zabbix-backend-localship", "AttachStdout": true, "User":
-      "", "OpenStdin": true, "AttachStderr": true, "Tty": true, "Image": "registry.ape.yandex.net/nikicat/zabbix-server:6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7",
-      "Env": [], "StdinOnce": true, "AttachStdin": true, "Memory": 0, "ExposedPorts":
-      {"10051/tcp": {}}, "MemorySwap": 0, "NetworkDisabled": false}'
+    body: '{"Env": ["GOLEM_ALERT_LOG=/var/log/zabbix/golem-alert.log"], "StdinOnce":
+      true, "Tty": true, "Memory": 0, "ExposedPorts": {"10051/tcp": {}}, "AttachStderr":
+      true, "OpenStdin": true, "MemorySwap": 0, "Image": "registry.ape.yandex.net/nikicat/zabbix-server:3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1",
+      "User": "", "AttachStdin": true, "Hostname": "zabbix-backend-localship", "NetworkDisabled":
+      false, "AttachStdout": true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Content-Length: ['393']
+      Content-Length: ['442']
       Content-Type: [application/json]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: POST
     uri: http://localhost:4243/v1.15/containers/create?name=unnamed.zabbix-backend
   response:
-    body: {string: '{"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Warnings":null}
+    body: {string: '{"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Warnings":null}
 
 '}
     headers:
       Content-Length: ['90']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:24 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:33 GMT']
     status: {code: 201, message: Created}
 - request:
-    body: '{"PortBindings": {"10051/tcp": [{"HostIp": "::", "HostPort": "10051"}]},
-      "PublishAllPorts": false, "Privileged": true, "Binds": ["/tmp/data/unnamed/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw",
-      "/tmp/config/unnamed/zabbix-backend/etc/zabbix:/etc/zabbix:ro"]}'
+    body: '{"Privileged": true, "PortBindings": {"10051/tcp": [{"HostPort": "10051",
+      "HostIp": "::"}]}, "PublishAllPorts": false, "Binds": ["/tmp/config/unnamed/zabbix-backend/etc/zabbix:/etc/zabbix:ro",
+      "/tmp/data/unnamed/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw"]}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -232,11 +250,11 @@ interactions:
       Content-Type: [application/json]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.15/containers/9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a/start
+    uri: http://localhost:4243/v1.15/containers/6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c/start
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 06 Nov 2014 15:02:24 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:33 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -246,19 +264,19 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/scripts/zabbix.sh","Created":1415286144,"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/scripts/zabbix.sh","Created":1415360493,"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
         ]'}
     headers:
-      Content-Length: ['668']
+      Content-Length: ['652']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:24 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:33 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -268,9 +286,9 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-frontend&only_ids=0&all=1
+    uri: http://localhost:4243/v1.15/images/json?filter=registry.ape.yandex.net%2Fnikicat%2Fzabbix-frontend&all=1&only_ids=0
   response:
-    body: {string: '[{"Created":1415282815,"Id":"3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df","ParentId":"313aa1e8af37808616719a805762de256ef6a8bbf5656fb99c0ba0b9c375ba3c","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg."],"Size":183,"VirtualSize":582266631}
+    body: {string: '[{"Created":1415282815,"Id":"3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df","ParentId":"313aa1e8af37808616719a805762de256ef6a8bbf5656fb99c0ba0b9c375ba3c","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg.","registry.ape.yandex.net/nikicat/zabbix-frontend:1jBeX4BBj2Xr3ldbAQzlPt3v8UU."],"Size":183,"VirtualSize":582266631}
 
         ,{"Created":1413544012,"Id":"696b7f5abeb0163106c789716b7add9c3c947a9af6dcd0e86bf5644b9019a334","ParentId":"313aa1e8af37808616719a805762de256ef6a8bbf5656fb99c0ba0b9c375ba3c","RepoTags":["registry.ape.yandex.net/nikicat/zabbix-frontend:ReHGF2-bpmGXrBaB7P7Rjp0v453VMGn4A8uH5mq8F8Y="],"Size":183,"VirtualSize":582266631}
 
@@ -323,14 +341,15 @@ interactions:
         ]'}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:24 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
-    body: '{"Hostname": "zabbix-frontend-localship", "AttachStdout": true, "User":
-      "", "OpenStdin": true, "AttachStderr": true, "Tty": true, "Image": "registry.ape.yandex.net/nikicat/zabbix-frontend:3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df",
-      "Env": [], "StdinOnce": true, "AttachStdin": true, "Memory": 0, "ExposedPorts":
-      {"80/tcp": {}}, "MemorySwap": 0, "NetworkDisabled": false}'
+    body: '{"Env": [], "StdinOnce": true, "Tty": true, "Memory": 0, "ExposedPorts":
+      {"80/tcp": {}}, "AttachStderr": true, "OpenStdin": true, "MemorySwap": 0, "Image":
+      "registry.ape.yandex.net/nikicat/zabbix-frontend:3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df",
+      "User": "", "AttachStdin": true, "Hostname": "zabbix-frontend-localship", "NetworkDisabled":
+      false, "AttachStdout": true}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -341,18 +360,18 @@ interactions:
     method: POST
     uri: http://localhost:4243/v1.15/containers/create?name=unnamed.zabbix-frontend
   response:
-    body: {string: '{"Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Warnings":null}
+    body: {string: '{"Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Warnings":null}
 
 '}
     headers:
       Content-Length: ['90']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:24 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 201, message: Created}
 - request:
-    body: '{"PortBindings": {"80/tcp": [{"HostIp": "::", "HostPort": "80"}]}, "PublishAllPorts":
-      false, "Privileged": true, "Binds": ["/tmp/data/unnamed/zabbix-frontend/var/log/apache2:/var/log/apache2:rw",
-      "/tmp/config/unnamed/zabbix-frontend/etc/zabbix:/etc/zabbix:ro"]}'
+    body: '{"Privileged": true, "PortBindings": {"80/tcp": [{"HostPort": "80", "HostIp":
+      "::"}]}, "PublishAllPorts": false, "Binds": ["/tmp/config/unnamed/zabbix-frontend/etc/zabbix:/etc/zabbix:ro",
+      "/tmp/data/unnamed/zabbix-frontend/var/log/apache2:/var/log/apache2:rw"]}'
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -361,11 +380,11 @@ interactions:
       Content-Type: [application/json]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.15/containers/07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54/start
+    uri: http://localhost:4243/v1.15/containers/e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f/start
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -375,22 +394,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415286144,"Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415360494,"Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:1jBeX4BBj2Xr3ldbAQzlPt3v8UU.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/scripts/zabbix.sh","Created":1415286144,"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/scripts/zabbix.sh","Created":1415360493,"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         1 seconds"}
 
         ]'}
     headers:
-      Content-Length: ['1029']
+      Content-Length: ['997']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -400,14 +419,14 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c/json
+    uri: http://localhost:4243/v1.15/containers/d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d/json
   response:
-    body: {string: '{"Args":["postgres"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["postgres"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/docker-entrypoint.sh"],"Env":["HOME=/","PATH=/usr/lib/postgresql/9.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LANG=en_US.utf8","PG_MAJOR=9.3","PG_VERSION=9.3.5-1.pgdg70+1","PGDATA=/var/lib/postgresql/data"],"ExposedPorts":{"5432/tcp":{}},"Hostname":"postgres-localship","Image":"registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":true,"Tty":true,"User":"","Volumes":{"/var/lib/postgresql/data":{}},"WorkingDir":""},"Created":"2014-11-06T15:02:23.299085062Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/data/unnamed/postgres/var/log/postgresql:/var/log/postgresql:rw","/tmp/data/unnamed/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c/hostname","HostsPath":"/var/lib/docker/containers/9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c/hosts","Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","MountLabel":"","Name":"/unnamed.postgres","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.3","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:03","PortMapping":null,"Ports":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]}},"Path":"/docker-entrypoint.sh","ProcessLabel":"","ResolvConfPath":"/var/lib/docker/containers/9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":15589,"Restarting":false,"Running":true,"StartedAt":"2014-11-06T15:02:23.52688186Z"},"Volumes":{"/var/lib/postgresql/data":"/tmp/data/unnamed/postgres/var/lib/postgresql/data","/var/log/postgresql":"/tmp/data/unnamed/postgres/var/log/postgresql"},"VolumesRW":{"/var/lib/postgresql/data":true,"/var/log/postgresql":true}}
+    body: {string: '{"Args":["postgres"],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["postgres"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/docker-entrypoint.sh"],"Env":["HOME=/","PATH=/usr/lib/postgresql/9.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LANG=en_US.utf8","PG_MAJOR=9.3","PG_VERSION=9.3.5-1.pgdg70+1","PGDATA=/var/lib/postgresql/data"],"ExposedPorts":{"5432/tcp":{}},"Hostname":"postgres-localship","Image":"registry.ape.yandex.net/nikicat/postgres:2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":true,"Tty":true,"User":"","Volumes":{"/var/lib/postgresql/data":{}},"WorkingDir":""},"Created":"2014-11-07T11:41:32.608209651Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/data/unnamed/postgres/var/lib/postgresql/data:/var/lib/postgresql/data:rw","/tmp/data/unnamed/postgres/var/log/postgresql:/var/log/postgresql:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d/hostname","HostsPath":"/var/lib/docker/containers/d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d/hosts","Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"2f007d4a5aa527e170bf632757253b0fbb98d1d7072f6acab882e2777e99cf23","MountLabel":"","Name":"/unnamed.postgres","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.14","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:0e","PortMapping":null,"Ports":{"5432/tcp":[{"HostIp":"::","HostPort":"15999"}]}},"Path":"/docker-entrypoint.sh","ProcessLabel":"","ResolvConfPath":"/var/lib/docker/containers/d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":18340,"Restarting":false,"Running":true,"StartedAt":"2014-11-07T11:41:32.864489457Z"},"Volumes":{"/var/lib/postgresql/data":"/tmp/data/unnamed/postgres/var/lib/postgresql/data","/var/log/postgresql":"/tmp/data/unnamed/postgres/var/log/postgresql"},"VolumesRW":{"/var/lib/postgresql/data":true,"/var/log/postgresql":true}}
 
 '}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
@@ -427,7 +446,7 @@ interactions:
     headers:
       Content-Length: ['1887']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -446,7 +465,7 @@ interactions:
     headers:
       Content-Length: ['1887']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -456,22 +475,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415286144,"Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415360494,"Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:1jBeX4BBj2Xr3ldbAQzlPt3v8UU.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/scripts/zabbix.sh","Created":1415286144,"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/scripts/zabbix.sh","Created":1415360493,"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         1 seconds"}
 
         ]'}
     headers:
-      Content-Length: ['1029']
+      Content-Length: ['997']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -481,14 +500,14 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a/json
+    uri: http://localhost:4243/v1.15/containers/6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c/json
   response:
-    body: {string: '{"Args":[],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"zabbix-backend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-server:6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":true,"Tty":true,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-11-06T15:02:24.131599349Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/data/unnamed/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw","/tmp/config/unnamed/zabbix-backend/etc/zabbix:/etc/zabbix:ro"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]},"Privileged":true,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a/hostname","HostsPath":"/var/lib/docker/containers/9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a/hosts","Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7","MountLabel":"","Name":"/unnamed.zabbix-backend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.4","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:04","PortMapping":null,"Ports":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]}},"Path":"/scripts/zabbix.sh","ProcessLabel":"","ResolvConfPath":"/var/lib/docker/containers/9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":15623,"Restarting":false,"Running":true,"StartedAt":"2014-11-06T15:02:24.293276046Z"},"Volumes":{"/etc/zabbix":"/tmp/config/unnamed/zabbix-backend/etc/zabbix","/var/log/zabbix":"/tmp/data/unnamed/zabbix-backend/var/log/zabbix"},"VolumesRW":{"/etc/zabbix":false,"/var/log/zabbix":true}}
+    body: {string: '{"Args":[],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["GOLEM_ALERT_LOG=/var/log/zabbix/golem-alert.log","PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"zabbix-backend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-server:3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":true,"Tty":true,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-11-07T11:41:33.651406862Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/config/unnamed/zabbix-backend/etc/zabbix:/etc/zabbix:ro","/tmp/data/unnamed/zabbix-backend/var/log/zabbix:/var/log/zabbix:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]},"Privileged":true,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c/hostname","HostsPath":"/var/lib/docker/containers/6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c/hosts","Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1","MountLabel":"","Name":"/unnamed.zabbix-backend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.15","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:0f","PortMapping":null,"Ports":{"10051/tcp":[{"HostIp":"::","HostPort":"10051"}]}},"Path":"/scripts/zabbix.sh","ProcessLabel":"","ResolvConfPath":"/var/lib/docker/containers/6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":18380,"Restarting":false,"Running":true,"StartedAt":"2014-11-07T11:41:33.812534865Z"},"Volumes":{"/etc/zabbix":"/tmp/config/unnamed/zabbix-backend/etc/zabbix","/var/log/zabbix":"/tmp/data/unnamed/zabbix-backend/var/log/zabbix"},"VolumesRW":{"/etc/zabbix":false,"/var/log/zabbix":true}}
 
 '}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
@@ -499,17 +518,17 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/images/6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7/json
+    uri: http://localhost:4243/v1.15/images/3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1/json
   response:
-    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"b6b630ed07412da5738bd87bcb81bba88d25e0695e9d7af1c0b5caee75a16172","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
-        ADD file:9d7ad60feb03c86486f38ca13dd98731350ea9bd46019ebf13c3931ed586a189
-        in /usr/lib/zabbix/alertscripts/golem-alert-handler.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-11-06T14:07:02.694310325Z","DockerVersion":"1.3.0","Id":"6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7","Os":"linux","Parent":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Size":0,"VirtualSize":632690075}
+    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"e0b015b427ad3ae5c84fab6d39dbe758ed14ca5dcff9ff932ef3f92a3abef3ad","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
+        ADD file:c43d2a2e78655ed74756de5ba216a1885113c2d2ff80060e6c09899d81fe8e53
+        in /usr/lib/zabbix/alertscripts/golem-alert-handler.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-11-07T10:58:56.210069997Z","DockerVersion":"1.3.1","Id":"3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1","Os":"linux","Parent":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Size":1432,"VirtualSize":632691507}
 
 '}
     headers:
-      Content-Length: ['1845']
+      Content-Length: ['1848']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -519,17 +538,17 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/images/6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7/json
+    uri: http://localhost:4243/v1.15/images/3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1/json
   response:
-    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"b6b630ed07412da5738bd87bcb81bba88d25e0695e9d7af1c0b5caee75a16172","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
-        ADD file:9d7ad60feb03c86486f38ca13dd98731350ea9bd46019ebf13c3931ed586a189
-        in /usr/lib/zabbix/alertscripts/golem-alert-handler.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-11-06T14:07:02.694310325Z","DockerVersion":"1.3.0","Id":"6763055c773f51933be235c9722b8abca9bcc453616c693c10d2553cbc8829a7","Os":"linux","Parent":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Size":0,"VirtualSize":632690075}
+    body: {string: '{"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/scripts/zabbix.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Container":"e0b015b427ad3ae5c84fab6d39dbe758ed14ca5dcff9ff932ef3f92a3abef3ad","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop)
+        ADD file:c43d2a2e78655ed74756de5ba216a1885113c2d2ff80060e6c09899d81fe8e53
+        in /usr/lib/zabbix/alertscripts/golem-alert-handler.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"10051/tcp":{}},"Hostname":"9818fcbe520e","Image":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":{"/etc/zabbix":{},"/var/log/zabbix":{}},"WorkingDir":"/root"},"Created":"2014-11-07T10:58:56.210069997Z","DockerVersion":"1.3.1","Id":"3f6a26f5dca98d39466a1dd6be07250105d6664349ef7208dac177b897aa3df1","Os":"linux","Parent":"7c6d0c131a02208fc1260bf673b1f98126f73c895e1f2af87e84a693c89f0e73","Size":1432,"VirtualSize":632691507}
 
 '}
     headers:
-      Content-Length: ['1845']
+      Content-Length: ['1848']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -539,22 +558,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415286144,"Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415360494,"Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:1jBeX4BBj2Xr3ldbAQzlPt3v8UU.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/scripts/zabbix.sh","Created":1415286144,"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
-        Less than a second"}
+        ,{"Command":"/scripts/zabbix.sh","Created":1415360493,"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+        1 seconds"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
         1 seconds"}
 
         ]'}
     headers:
-      Content-Length: ['1029']
+      Content-Length: ['988']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -564,14 +583,14 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54/json
+    uri: http://localhost:4243/v1.15/containers/e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f/json
   response:
-    body: {string: '{"Args":[],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"80/tcp":{}},"Hostname":"zabbix-frontend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":true,"Tty":true,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-11-06T15:02:24.921763082Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/data/unnamed/zabbix-frontend/var/log/apache2:/var/log/apache2:rw","/tmp/config/unnamed/zabbix-frontend/etc/zabbix:/etc/zabbix:ro"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]},"Privileged":true,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54/hostname","HostsPath":"/var/lib/docker/containers/07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54/hosts","Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Image":"3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df","MountLabel":"","Name":"/unnamed.zabbix-frontend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.5","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:05","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]}},"Path":"/scripts/frontend.sh","ProcessLabel":"","ResolvConfPath":"/var/lib/docker/containers/07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":15657,"Restarting":false,"Running":true,"StartedAt":"2014-11-06T15:02:25.057065898Z"},"Volumes":{"/etc/zabbix":"/tmp/config/unnamed/zabbix-frontend/etc/zabbix","/var/log/apache2":"/tmp/data/unnamed/zabbix-frontend/var/log/apache2"},"VolumesRW":{"/etc/zabbix":false,"/var/log/apache2":true}}
+    body: {string: '{"Args":[],"Config":{"AttachStderr":true,"AttachStdin":true,"AttachStdout":true,"Cmd":["/scripts/frontend.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","INITRD=No","FAKE_CHROOT=1","HOME=/root","LC_ALL=C.UTF-8"],"ExposedPorts":{"80/tcp":{}},"Hostname":"zabbix-frontend-localship","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":true,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":true,"Tty":true,"User":"","Volumes":null,"WorkingDir":"/root"},"Created":"2014-11-07T11:41:34.485094856Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":["/tmp/config/unnamed/zabbix-frontend/etc/zabbix:/etc/zabbix:ro","/tmp/data/unnamed/zabbix-frontend/var/log/apache2:/var/log/apache2:rw"],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]},"Privileged":true,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"/var/lib/docker/containers/e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f/hostname","HostsPath":"/var/lib/docker/containers/e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f/hosts","Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Image":"3f030c38e6cea8bb4688a15089541cbfcf6158798cfbb1d3334adb23bb6615df","MountLabel":"","Name":"/unnamed.zabbix-frontend","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.16","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:10","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"::","HostPort":"80"}]}},"Path":"/scripts/frontend.sh","ProcessLabel":"","ResolvConfPath":"/var/lib/docker/containers/e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":18409,"Restarting":false,"Running":true,"StartedAt":"2014-11-07T11:41:34.671850269Z"},"Volumes":{"/etc/zabbix":"/tmp/config/unnamed/zabbix-frontend/etc/zabbix","/var/log/apache2":"/tmp/data/unnamed/zabbix-frontend/var/log/apache2"},"VolumesRW":{"/etc/zabbix":false,"/var/log/apache2":true}}
 
 '}
     headers:
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
       Transfer-Encoding: [chunked]
     status: {code: 200, message: OK}
 - request:
@@ -592,7 +611,7 @@ interactions:
     headers:
       Content-Length: ['1724']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -612,7 +631,7 @@ interactions:
     headers:
       Content-Length: ['1724']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -622,22 +641,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415286144,"Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415360494,"Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:1jBeX4BBj2Xr3ldbAQzlPt3v8UU.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/scripts/zabbix.sh","Created":1415286144,"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
-        Less than a second"}
-
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/scripts/zabbix.sh","Created":1415360493,"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         1 seconds"}
+
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[{"IP":"::","PrivatePort":5432,"PublicPort":15999,"Type":"tcp"}],"Status":"Up
+        2 seconds"}
 
         ]'}
     headers:
-      Content-Length: ['1029']
+      Content-Length: ['988']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:34 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -648,11 +667,11 @@ interactions:
       Content-Length: ['0']
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.15/containers/9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c/stop?t=2
+    uri: http://localhost:4243/v1.15/containers/d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d/stop?t=2
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:35 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -662,22 +681,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415286144,"Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415360494,"Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:1jBeX4BBj2Xr3ldbAQzlPt3v8UU.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
         Less than a second"}
 
-        ,{"Command":"/scripts/zabbix.sh","Created":1415286144,"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
+        ,{"Command":"/scripts/zabbix.sh","Created":1415360493,"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM.","Names":["/unnamed.zabbix-backend"],"Ports":[{"IP":"::","PrivatePort":10051,"PublicPort":10051,"Type":"tcp"}],"Status":"Up
         1 seconds"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[],"Status":"Exited
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[],"Status":"Exited
         (0) Less than a second ago"}
 
         ]'}
     headers:
-      Content-Length: ['979']
+      Content-Length: ['947']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:25 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:35 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -688,11 +707,11 @@ interactions:
       Content-Length: ['0']
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.15/containers/9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a/stop?t=2
+    uri: http://localhost:4243/v1.15/containers/6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c/stop?t=2
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 06 Nov 2014 15:02:26 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:37 GMT']
     status: {code: 204, message: No Content}
 - request:
     body: null
@@ -702,22 +721,22 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: GET
-    uri: http://localhost:4243/v1.15/containers/json?limit=-1&size=0&trunc_cmd=1&all=1
+    uri: http://localhost:4243/v1.15/containers/json?size=0&trunc_cmd=1&all=1&limit=-1
   response:
-    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415286144,"Id":"07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:wWls68_VDk8nKV1OLiWYIjp-BoPyk5hIuVS4X4SLMmg.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
-        1 seconds"}
+    body: {string: '[{"Command":"/scripts/frontend.sh","Created":1415360494,"Id":"e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f","Image":"registry.ape.yandex.net/nikicat/zabbix-frontend:1jBeX4BBj2Xr3ldbAQzlPt3v8UU.","Names":["/unnamed.zabbix-frontend"],"Ports":[{"IP":"::","PrivatePort":80,"PublicPort":80,"Type":"tcp"}],"Status":"Up
+        2 seconds"}
 
-        ,{"Command":"/scripts/zabbix.sh","Created":1415286144,"Id":"9c3861bb32f7ec9cb79d5e35292c74d79929f250f1b7fad5923784a8d2b2c09a","Image":"registry.ape.yandex.net/nikicat/zabbix-server:pQm9Enrrd95yVg0ZS5G0MnuAYG8v8H-sVJaO3C4cqic.","Names":["/unnamed.zabbix-backend"],"Ports":[],"Status":"Exited
-        (1) Less than a second ago"}
+        ,{"Command":"/scripts/zabbix.sh","Created":1415360493,"Id":"6627464c5aa29323992df2346084afe13af708ff3071d411009592bb3d55762c","Image":"registry.ape.yandex.net/nikicat/zabbix-server:sumIgFPGcX_rY0ncSDAQbl6BWlM.","Names":["/unnamed.zabbix-backend"],"Ports":[],"Status":"Exited
+        (-1) Less than a second ago"}
 
-        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415286143,"Id":"9f21b833c2d8d492afc4eef1a74fe8f6b287c27b2a507f079e1c9ac29f18b83c","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[],"Status":"Exited
-        (0) 1 seconds ago"}
+        ,{"Command":"/docker-entrypoint.sh postgres","Created":1415360492,"Id":"d1079a0cbed5a60af73803044f9da7c463915f856f081d5a9ee25916191e290d","Image":"postgres:9","Names":["/unnamed.postgres"],"Ports":[],"Status":"Exited
+        (0) 2 seconds ago"}
 
         ]'}
     headers:
-      Content-Length: ['919']
+      Content-Length: ['888']
       Content-Type: [application/json]
-      Date: ['Thu, 06 Nov 2014 15:02:26 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:37 GMT']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -728,10 +747,10 @@ interactions:
       Content-Length: ['0']
       User-Agent: [python-requests/2.4.3 CPython/3.4.2 Linux/3.15.7-1-aufs_friendly]
     method: POST
-    uri: http://localhost:4243/v1.15/containers/07fb62f8216e4ae74791271952202884b00b8f316d254a436daaebcd87a4bb54/stop?t=2
+    uri: http://localhost:4243/v1.15/containers/e760b2f861938cf9c32a645a2773c75f1d0cd5e5e5a5a51b0fa320cb2ad3442f/stop?t=2
   response:
     body: {string: ''}
     headers:
-      Date: ['Thu, 06 Nov 2014 15:02:28 GMT']
+      Date: ['Fri, 07 Nov 2014 11:41:39 GMT']
     status: {code: 204, message: No Content}
 version: 1
