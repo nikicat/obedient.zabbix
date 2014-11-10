@@ -6,10 +6,7 @@ env:
   - TOXENV=flake8
   - TOXENV=pylint
   - TOXENV=dominator
-install:
-- pip install tox bumpversion
+before_install: umask 0022
+install: pip install tox bumpversion
 script: tox -v
-notifications:
-  hipchat:
-    rooms:
-      secure: XmjPEh5fNBH2nV2yf2hpbTgP57Pbt3v0ubyfjADfB6+KwsUvajGzbjpGNzgjNvXUbrNirHbkhS9EGFl/sSQK++JVdz0ub+X4aa6FTfAgL29tPlMriTij0XDE7WXjDkGw6qo5ZZCx725ENyUzLGuCeNgVWZTKFMANBJ9POTepkfU=
+after_failure: ls -lR .
