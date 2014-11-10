@@ -37,7 +37,7 @@ curl --silent --fail --get "https://golem.yandex-team.ru/api/manage_host.sbml" \
     --data-urlencode "hostname=$object" \
     --data-urlencode "resps=$to"
 
-# Submit and event
+# Submit event
 curl --silent --fail --get "https://golem.yandex-team.ru/api/events/submit.sbml" \
     --data-urlencode monitor=fqdn \
     --data-urlencode "object=$object" \

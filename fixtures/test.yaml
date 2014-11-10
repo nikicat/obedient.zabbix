@@ -157,7 +157,7 @@ ships:
               mode: 493
               mtime: 0.0
               name: usr/lib/zabbix/alertscripts/golem-alert-handler.sh
-              size: 1432
+              size: 1428
               type: !!binary |
                 MA==
               uid: 0
@@ -202,7 +202,7 @@ ships:
                   --data-urlencode "hostname=$object" \
                   --data-urlencode "resps=$to"
 
-              # Submit and event
+              # Submit event
               curl --silent --fail --get "https://golem.yandex-team.ru/api/events/submit.sbml" \
                   --data-urlencode monitor=fqdn \
                   --data-urlencode "object=$object" \
