@@ -1,0 +1,574 @@
+&id013 !!python/object:dominator.entities.Shipment
+dominator_version: 13.2.0
+filename: test.yaml
+name: unnamed
+ships:
+  local: &id003 !!python/object:dominator.entities.LocalShip
+    certificate: |
+      -----BEGIN CERTIFICATE-----
+      MIIBbzCB2QICA+gwDQYJKoZIhvcNAQEFBQAwADAeFw0xNDExMDcxNDQzMDdaFw0y
+      NDExMDQxNDQzMDdaMAAwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMjxetrU
+      mMMfV5RBo5ArLVlhuNTTSyha6K4SrIVX3ijoUWz3UhAYctZ2h8kt3ZWWpUM+PnSA
+      eW8TNYln6okw/QaGo+/v7Pghtdi5jhEIdg1nJgV88EDqgTtVG7zzsYCT4NoMQxBC
+      d0rp5NHXZgRqeSgQng+fMhjBMMXuvc5TIP2dAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+      gYEAinnyN6HxkthJwdSiRbPXDpj0bdZ+AmKhq0WWilxSWehXKVihUYMx6g45xkft
+      Uw/w4hF01ZRvwJeCSV8H6x9uJ/5UhmEB+aBQ5AGQKqqrwOebvdp8x2bhu0iFsb8P
+      7OmfjXBs41zzwOyndU0WvUVk7VVoz+l5WVTLoNs3B2yeVhY=
+      -----END CERTIFICATE-----
+      -----BEGIN PRIVATE KEY-----
+      MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAMjxetrUmMMfV5RB
+      o5ArLVlhuNTTSyha6K4SrIVX3ijoUWz3UhAYctZ2h8kt3ZWWpUM+PnSAeW8TNYln
+      6okw/QaGo+/v7Pghtdi5jhEIdg1nJgV88EDqgTtVG7zzsYCT4NoMQxBCd0rp5NHX
+      ZgRqeSgQng+fMhjBMMXuvc5TIP2dAgMBAAECgYEAs+ggCpSVQP1qt/4cpxNBQulP
+      Rpz2iWb7M/7cH3aQHSgC3wB/pJF/H6x33hMGdMuvowizejMcheo44JD9V19Y6UxX
+      GxqhUGoGnZEMlmHhW83LlPuRmSWIhu9xXO7GX/a7pdG8e8WQADFS/6YMgDG7OJrH
+      VBRDlKHc5XZ882BDrjECQQDs2/xgNDzn8UPz1ffgfZyUTT5M3d+a0Ycd1/1dUJsf
+      r+34pw5Wx96Ql/ISXRHbgFk5ppFMGRaPu0qoQKBp0UgDAkEA2S57pIosmGDPp/RY
+      IPkzhO1k2cvjqY4/M6+L3BnxYtQKnHTE8+N5ZZ/wtfS6gthxM8aL1YQolK7ZNBWT
+      14PB3wJAb605TVLT9Lg4xdr4yIvxK6tP2IY0S5bHEjcoarr6qPIWTcrWY+xQ7/P0
+      Wtwu80OMzjXPBAZAMPypsrLl736RaQJAAQivngDqZW9QjcQkB0QocqGOsVq/IreC
+      pYRYbhvRgl7wDf6gUWjr0wgH5VXc7XKKV2zCjamrZ8nNTuorYgNGkQJBALH/RZcL
+      cFbwY4zgRR+inP15twJ//rtc1GjFX0pgDEcWVsGVflozNX/SJP/LcYZisuALpj9c
+      bXzfMriPnKh4vCI=
+      -----END PRIVATE KEY-----
+    containers:
+      postgres: &id001 !!python/object:dominator.entities.Container
+        command: null
+        doors:
+          postgres: &id002 !!python/object:dominator.entities.Door
+            container: *id001
+            exposedport: 15999
+            internalport: 5432
+            name: postgres
+            protocol: tcp
+            sameports: false
+            schema: postgres
+            urls:
+              default: !!python/object:dominator.entities.Url
+                door: *id002
+                name: default
+                path: ''
+        entrypoint: null
+        env: {}
+        hostname: null
+        id: null
+        image: !!python/object:dominator.entities.SourceImage
+          command: null
+          entrypoint: null
+          env: {}
+          files: {}
+          namespace: nikicat
+          parent: !!python/object:dominator.entities.Image
+            namespace: null
+            registry: null
+            repository: postgres
+            tag: latest
+          ports: {}
+          registry: registry.ape.yandex.net
+          repository: postgres
+          scripts: []
+          user: ''
+          volumes: {}
+          workdir: null
+        links: {}
+        memory: 0
+        name: postgres
+        network_mode: ''
+        privileged: false
+        ship: *id003
+        status: null
+        user: ''
+        volumes:
+          data: !!python/object:dominator.entities.DataVolume
+            container: *id001
+            dest: /var/lib/postgresql/data
+            name: data
+            path: null
+            ro: false
+          logs: !!python/object:dominator.entities.LogVolume
+            container: *id001
+            dest: /var/log/postgresql
+            files: {}
+            name: logs
+            path: null
+            ro: false
+      zabbix-backend: &id004 !!python/object:dominator.entities.Container
+        command: null
+        doors:
+          zabbix-trapper: &id005 !!python/object:dominator.entities.Door
+            container: *id004
+            exposedport: 10051
+            internalport: 10051
+            name: zabbix-trapper
+            protocol: tcp
+            sameports: false
+            schema: zabbix-trapper
+            urls:
+              default: !!python/object:dominator.entities.Url
+                door: *id005
+                name: default
+                path: ''
+        entrypoint: null
+        env:
+          GOLEM_ALERT_LOG: /var/log/zabbix/golem-alert.log
+        hostname: null
+        id: null
+        image: &id014 !!python/object:dominator.entities.SourceImage
+          command:
+          - /scripts/zabbix.sh
+          entrypoint: null
+          env: {}
+          files:
+            /scripts/zabbix.sh: !!python/tuple
+            - chksum: 0
+              devmajor: 0
+              devminor: 0
+              gid: 0
+              gname: root
+              linkname: ''
+              mode: 493
+              mtime: 0.0
+              name: scripts/zabbix.sh
+              size: 382
+              type: !!binary |
+                MA==
+              uid: 0
+              uname: root
+            - |
+              #!/bin/bash -exv
+
+              # Apply shared memory settings
+              sysctl kernel.shmall=$((16 * 1024**3 / 4096))  # total shared memory size in pages
+              sysctl kernel.shmmax=$((2 * 1024**3))  # max shared memory segment size in bytes
+
+              mkdir /var/run/zabbix
+              chmod go+rwx /var/run/zabbix
+              /usr/sbin/zabbix_server
+              sleep 2
+              # Track server exit
+              strace -e none -e exit_group -p `cat /var/run/zabbix_server.pid`
+            /usr/lib/zabbix/alertscripts/golem-alert-handler.sh: !!python/tuple
+            - chksum: 0
+              devmajor: 0
+              devminor: 0
+              gid: 0
+              gname: root
+              linkname: ''
+              mode: 493
+              mtime: 0.0
+              name: usr/lib/zabbix/alertscripts/golem-alert-handler.sh
+              size: 1169
+              type: !!binary |
+                MA==
+              uid: 0
+              uname: root
+            - |
+              #!/bin/bash -e
+              #
+              # This is a Zabbix alerting script that convert alerts to Golem events.
+              # In case of sending failure it writes message to the log file.
+              # This script should be called with subject
+              #   {HOST.NAME}#{TRIGGER.NAME}#{STATUS}
+              # and body will be added as a description for an event
+
+              if [ -n "$GOLEM_ALERT_LOG" ]; then
+                  exec 2> >(while read line; do echo "$(date +'%d/%m/%Y:%H:%M:%S %z')  $line" >> "$GOLEM_ALERT_LOG"; done;)
+              fi
+
+              to="$1"
+              subject="$2"
+              body="$3"
+
+              if [ -z "$to" ] || [ -z "$subject" ] || [ -z "$body" ]; then
+                  echo "Usage: $0 <responsible> <object#eventtype#status> <description>" >&2
+                  exit 1
+              fi
+
+              IFS='#' read object eventtype _status <<< "$subject"
+
+              if [ "$_status" = "PROBLEM" ]; then
+                  status=critical
+              elif [ "$_status" = "OK" ]; then
+                  status=ok
+              else
+                  echo "Unexpected status: $_status. Should be PROBLEM or OK" >& 2
+                  exit 1
+              fi
+
+              # Submit event
+              curl --silent --fail --get "https://golem.yandex-team.ru/api/events/submit.sbml" \
+                  --data-urlencode monitor=fqdn \
+                  --data-urlencode "object=$object" \
+                  --data-urlencode "eventtype=$eventtype" \
+                  --data-urlencode "status=$status" \
+                  --data-urlencode "info=$body"
+          namespace: nikicat
+          parent: &id010 !!python/object:dominator.entities.SourceImage
+            command: null
+            entrypoint: null
+            env: {}
+            files: {}
+            namespace: nikicat
+            parent: !!python/object:dominator.entities.Image
+              namespace: yandex
+              registry: registry.ape.yandex.net
+              repository: trusty
+              tag: latest
+            ports: {}
+            registry: registry.ape.yandex.net
+            repository: zabbix
+            scripts:
+            - wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_2.4-1+trusty_all.deb
+            - dpkg -i zabbix-release_2.4-1+trusty_all.deb && apt-get update
+            user: ''
+            volumes: {}
+            workdir: null
+          ports:
+            zabbix-trapper: 10051
+          registry: registry.ape.yandex.net
+          repository: zabbix-server
+          scripts:
+          - apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y zabbix-server-pgsql=1:2.4.1-1+trusty
+            strace snmp-mibs-downloader fping nmap
+          - ln -fs /usr/bin/fping /usr/sbin/
+          user: ''
+          volumes:
+            config: /etc/zabbix
+            logs: /var/log/zabbix
+          workdir: null
+        links: {}
+        memory: 0
+        name: zabbix-backend
+        network_mode: ''
+        privileged: true
+        ship: *id003
+        status: null
+        user: ''
+        volumes:
+          config: &id006 !!python/object:dominator.entities.ConfigVolume
+            container: *id004
+            dest: /etc/zabbix
+            files:
+              zabbix_server.conf: !!python/object:dominator.entities.TextFile
+                data: |-
+                  AlertScriptsPath=/usr/lib/zabbix/alertscripts
+                  AllowRoot=1
+                  CacheUpdateFrequency=10
+                  DBHost=localhost
+                  DBName=zabbix
+                  DBPassword=
+                  DBPort=15999
+                  DBUser=postgres
+                  ExternalScripts=/usr/lib/zabbix/externalscripts
+                  HistoryCacheSize=2G
+                  HistoryTextCacheSize=2G
+                  JavaGateway=127.0.0.1
+                  LogFile=/var/log/zabbix/zabbix_server.log
+                  LogFileSize=0
+                  PidFile=/var/run/zabbix_server.pid
+                  ProxyConfigFrequency=10
+                  SNMPTrapperFile=/var/log/zabbix/snmptt.log
+                  SenderFrequency=10
+                  StartDBSyncers=4
+                  StartIPMIPollers=0
+                  StartJavaPollers=0
+                  StartPollers=5
+                  StartTrappers=1
+                  StartVMwareCollectors=0
+                  Timeout=30
+                  TrendCacheSize=2G
+                  UnavailableDelay=10
+                  UnreachableDelay=10
+                  UnreachablePeriod=10
+                  VMwareCacheSize=256K
+                  VMwareFrequency=10
+                  ValueCacheSize=2G
+                name: zabbix_server.conf
+                volume: *id006
+            name: config
+          logs: &id007 !!python/object:dominator.entities.LogVolume
+            container: *id004
+            dest: /var/log/zabbix
+            files:
+              golem-alert.log: !!python/object:dominator.entities.LogFile
+                format: ''
+                length: 0
+                name: golem-alert.log
+                volume: *id007
+              snmptt.log: !!python/object:dominator.entities.LogFile
+                format: ''
+                length: 0
+                name: snmptt.log
+                volume: *id007
+              zabbix_server.log: !!python/object:dominator.entities.LogFile
+                format: ''
+                length: 0
+                name: zabbix_server.log
+                volume: *id007
+            name: logs
+            path: null
+            ro: false
+      zabbix-frontend: &id008 !!python/object:dominator.entities.Container
+        command: null
+        doors:
+          http: &id009 !!python/object:dominator.entities.Door
+            container: *id008
+            exposedport: 80
+            internalport: 80
+            name: http
+            protocol: tcp
+            sameports: false
+            schema: http
+            urls:
+              default: !!python/object:dominator.entities.Url
+                door: *id009
+                name: default
+                path: zabbix
+        entrypoint: null
+        env: {}
+        hostname: null
+        id: null
+        image: !!python/object:dominator.entities.SourceImage
+          command:
+          - /scripts/frontend.sh
+          entrypoint: null
+          env: {}
+          files:
+            /scripts/frontend.sh: !!python/tuple
+            - chksum: 0
+              devmajor: 0
+              devminor: 0
+              gid: 0
+              gname: root
+              linkname: ''
+              mode: 493
+              mtime: 0.0
+              name: scripts/frontend.sh
+              size: 183
+              type: !!binary |
+                MA==
+              uid: 0
+              uname: root
+            - |
+              #!/bin/bash -exv
+              # because www-data haven't access to volume
+              id
+              mount -oremount,rw /etc/zabbix
+              chmod go+rx /etc/zabbix
+              #mount -oremount,ro /etc/zabbix
+              apachectl -e debug -DFOREGROUND
+          namespace: nikicat
+          parent: *id010
+          ports: {}
+          registry: registry.ape.yandex.net
+          repository: zabbix-frontend
+          scripts:
+          - apt-get update && apt-get install -y zabbix-frontend-php=1:2.4.1-1+trusty
+            apache2 php5-pgsql
+          - chmod go+rx /etc/zabbix
+          user: ''
+          volumes: {}
+          workdir: null
+        links: {}
+        memory: 0
+        name: zabbix-frontend
+        network_mode: ''
+        privileged: true
+        ship: *id003
+        status: null
+        user: ''
+        volumes:
+          config-apache: &id011 !!python/object:dominator.entities.ConfigVolume
+            container: *id008
+            dest: /etc/zabbix
+            files:
+              apache.conf: !!python/object:dominator.entities.TextFile
+                data: |
+                  # Define /zabbix alias, this is the default
+                  <IfModule mod_alias.c>
+                      Alias /zabbix /usr/share/zabbix
+                  </IfModule>
+
+                  <Directory "/usr/share/zabbix">
+                      Options FollowSymLinks
+                      AllowOverride None
+                      Order allow,deny
+                      Allow from all
+
+                      php_value max_execution_time 300
+                      php_value memory_limit 128M
+                      php_value post_max_size 16M
+                      php_value upload_max_filesize 2M
+                      php_value max_input_time 300
+                      php_value date.timezone UTC
+                  </Directory>
+
+                  <Directory "/usr/share/zabbix/conf">
+                      Order deny,allow
+                      Deny from all
+                      <files *.php>
+                          Order deny,allow
+                          Deny from all
+                      </files>
+                  </Directory>
+
+                  <Directory "/usr/share/zabbix/api">
+                      Order deny,allow
+                      Deny from all
+                      <files *.php>
+                          Order deny,allow
+                          Deny from all
+                      </files>
+                  </Directory>
+
+                  <Directory "/usr/share/zabbix/include">
+                      Order deny,allow
+                      Deny from all
+                      <files *.php>
+                          Order deny,allow
+                          Deny from all
+                      </files>
+                  </Directory>
+
+                  <Directory "/usr/share/zabbix/include/classes">
+                      Order deny,allow
+                      Deny from all
+                      <files *.php>
+                          Order deny,allow
+                          Deny from all
+                      </files>
+                  </Directory>
+                name: apache.conf
+                volume: *id011
+              web/zabbix.conf.php: !!python/object:dominator.entities.TemplateFile
+                context:
+                  backend: *id004
+                  postgres: *id001
+                name: web/zabbix.conf.php
+                template: |
+                  <?php
+                  // Zabbix GUI configuration file
+                  global $DB;
+                  $DB["TYPE"] = 'POSTGRESQL';
+                  $DB["SERVER"]   = '${ postgres.ship.fqdn }';
+                  $DB["PORT"] = '${ postgres.doors['postgres'].port }';
+                  $DB["DATABASE"] = 'zabbix';
+                  $DB["USER"] = 'postgres';
+                  $DB["PASSWORD"] = '';
+                  // SCHEMA is relevant only for IBM_DB2 database
+                  $DB["SCHEMA"]   = '';
+                  $ZBX_SERVER = '${ backend.ship.fqdn }';
+                  $ZBX_SERVER_PORT    = '${ backend.doors['zabbix-trapper'].port }';
+                  $ZBX_SERVER_NAME    = '';
+                  $IMAGE_FORMAT_DEFAULT   = IMAGE_FORMAT_PNG;
+                  ?>
+                volume: *id011
+            name: config-apache
+          logs: &id012 !!python/object:dominator.entities.LogVolume
+            container: *id008
+            dest: /var/log/apache2
+            files:
+              access.log: !!python/object:dominator.entities.LogFile
+                format: ''
+                length: 0
+                name: access.log
+                volume: *id012
+              error.log: !!python/object:dominator.entities.LogFile
+                format: ''
+                length: 0
+                name: error.log
+                volume: *id012
+            name: logs
+            path: null
+            ro: false
+    shipment: *id013
+tasks:
+  dump: &id015 !!python/object:dominator.entities.Task
+    command:
+    - /scripts/run.sh
+    doors: {}
+    entrypoint: null
+    env: {}
+    hostname: null
+    id: null
+    image: *id014
+    links: {}
+    memory: 0
+    name: dump
+    network_mode: ''
+    privileged: false
+    ship: null
+    shipment: *id013
+    status: null
+    user: ''
+    volumes:
+      scripts: &id016 !!python/object:dominator.entities.ConfigVolume
+        container: *id015
+        dest: /scripts
+        files:
+          run.sh: !!python/object:dominator.entities.TextFile
+            data: pg_dump -U postgres -h localhost -p 15999 -c -C zabbix
+            name: run.sh
+            volume: *id016
+        name: scripts
+  reinit: &id017 !!python/object:dominator.entities.Task
+    command:
+    - /scripts/run.sh
+    doors: {}
+    entrypoint: null
+    env: {}
+    hostname: null
+    id: null
+    image: *id014
+    links: {}
+    memory: 0
+    name: reinit
+    network_mode: ''
+    privileged: false
+    ship: null
+    shipment: *id013
+    status: null
+    user: ''
+    volumes:
+      scripts: &id018 !!python/object:dominator.entities.ConfigVolume
+        container: *id017
+        dest: /scripts
+        files:
+          run.sh: !!python/object:dominator.entities.TextFile
+            data: |
+              #!/bin/bash
+                          cmd='psql -U postgres -h localhost -p 15999'
+                          echo 'drop database zabbix; create database zabbix;' | $cmd
+                          cd /usr/share/zabbix-server-pgsql
+                          cat schema.sql images.sql data.sql | $cmd zabbix
+            name: run.sh
+            volume: *id018
+        name: scripts
+  restore: &id019 !!python/object:dominator.entities.Task
+    command:
+    - /scripts/run.sh
+    doors: {}
+    entrypoint: null
+    env: {}
+    hostname: null
+    id: null
+    image: *id014
+    links: {}
+    memory: 0
+    name: restore
+    network_mode: ''
+    privileged: false
+    ship: null
+    shipment: *id013
+    status: null
+    user: ''
+    volumes:
+      scripts: &id020 !!python/object:dominator.entities.ConfigVolume
+        container: *id019
+        dest: /scripts
+        files:
+          run.sh: !!python/object:dominator.entities.TextFile
+            data: psql -U postgres -h localhost -p 15999
+            name: run.sh
+            volume: *id020
+        name: scripts

@@ -1,8 +1,8 @@
 from textwrap import dedent
-from dominator.utils import resource_string, cached
+from dominator.utils import resource_string, resource_stream, cached
 from dominator.entities import (SourceImage, Image, DataVolume, ConfigVolume, TemplateFile,
-                                Container, LogVolume, LocalShip, Url,
-                                Shipment, Door, TextFile, LogFile, Task)
+                                Container, LogVolume, Url,
+                                Door, TextFile, LogFile, Task)
 
 
 @cached
@@ -13,44 +13,26 @@ def make_zabbix_image():
         scripts=[
             'wget http://repo.zabbix.com/zabbix/2.4/ubuntu/pool/main/z/\
 zabbix-release/zabbix-release_2.4-1+trusty_all.deb',
-            'dpkg -i zabbix-release_2.4-1+trusty_all.deb',
-            'apt-get update',
+            'dpkg -i zabbix-release_2.4-1+trusty_all.deb && apt-get update',
         ],
-        entrypoint=['bash'],
     )
 
 
-@cached
-def make_server_image():
-    return SourceImage(
-        name='zabbix-server',
-        parent=make_zabbix_image(),
-        ports={'zabbix-trapper': 10051},
-        scripts=[
-            'DEBIAN_FRONTEND=noninteractive apt-get install -y zabbix-server-pgsql '
-            'strace snmp-mibs-downloader fping nmap',
-        ],
-        files={
-            '/scripts/zabbix.sh': resource_string('zabbix.sh'),
-        },
-        volumes={
-            'logs': '/var/log/zabbix',
-            'config': '/etc/zabbix'
-        },
-        command=['/scripts/zabbix.sh'],
-    )
+def make_config_file(config):
+    return '\n'.join(['{}={}'.format(key, value) for key, value in config.items()])
 
 
-def make():
+def make(version='1:2.4.1-1+trusty'):
     frontend_image = SourceImage(
         name='zabbix-frontend',
         parent=make_zabbix_image(),
         scripts=[
-            'apt-get install -y zabbix-frontend-php apache2 php5-pgsql',
+            'apt-get update && '
+            'apt-get install -y zabbix-frontend-php={version} apache2 php5-pgsql'.format(version=version),
             'chmod go+rx /etc/zabbix',
         ],
         files={
-            '/scripts/frontend.sh': resource_string('frontend.sh'),
+            '/scripts/frontend.sh': resource_stream('frontend.sh'),
         },
         command=['/scripts/frontend.sh'],
     )
@@ -71,6 +53,29 @@ def make():
         },
     )
 
+    @cached
+    def make_server_image():
+        return SourceImage(
+            name='zabbix-server',
+            parent=make_zabbix_image(),
+            ports={'zabbix-trapper': 10051},
+            scripts=[
+                'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ' +
+                'zabbix-server-pgsql={version} '.format(version=version) +
+                'strace snmp-mibs-downloader fping nmap',
+                'ln -fs /usr/bin/fping /usr/sbin/',
+            ],
+            files={
+                '/scripts/zabbix.sh': resource_stream('zabbix.sh'),
+                '/usr/lib/zabbix/alertscripts/golem-alert-handler.sh': resource_stream('golem-alert-handler.sh'),
+            },
+            volumes={
+                'logs': '/var/log/zabbix',
+                'config': '/etc/zabbix',
+            },
+            command=['/scripts/zabbix.sh'],
+        )
+
     backend = Container(
         name='zabbix-backend',
         image=make_server_image(),
@@ -80,18 +85,60 @@ def make():
             'logs': LogVolume(
                 dest='/var/log/zabbix',
                 files={
-                    'zabbix_server.log': LogFile()
+                    'zabbix_server.log': LogFile(),
+                    'snmptt.log': LogFile(),
+                    'golem-alert.log': LogFile(),
                 },
             ),
             'config': ConfigVolume(
                 dest='/etc/zabbix',
-                files={'zabbix_server.conf': TemplateFile(
-                    resource_string('zabbix_server.conf'),
-                    postgres=postgres,
-                )},
+                files={'zabbix_server.conf': None},
             ),
         },
     )
+    # This variable is needed for golem-alert-handler.sh script
+    backend.env['GOLEM_ALERT_LOG'] = backend.volumes['logs'].files['golem-alert.log'].fulldest
+
+    def make_zabbix_server_conf(backend=backend, postgres=postgres):
+        logfiles = backend.volumes['logs'].files
+        config = {
+            'LogFile': logfiles['zabbix_server.log'].fulldest,
+            'LogFileSize': 0,
+            'PidFile': '/var/run/zabbix_server.pid',
+            'DBHost': postgres.ship.fqdn,
+            'DBName': 'zabbix',
+            'DBUser': 'postgres',
+            'DBPassword': '',
+            'DBPort': postgres.doors['postgres'].port,
+            'StartPollers': 5,
+            'StartIPMIPollers': 0,
+            'StartTrappers': 1,
+            'JavaGateway': '127.0.0.1',
+            'StartJavaPollers': 0,
+            'StartVMwareCollectors': 0,
+            'VMwareFrequency': 10,
+            'VMwareCacheSize': '256K',
+            'SNMPTrapperFile': logfiles['snmptt.log'].fulldest,
+            'SenderFrequency': 10,
+            'CacheUpdateFrequency': 10,
+            'StartDBSyncers': 4,
+            'HistoryCacheSize': '2G',
+            'TrendCacheSize': '2G',
+            'HistoryTextCacheSize': '2G',
+            'ValueCacheSize': '2G',
+            'Timeout': 30,
+            'UnreachablePeriod': 10,
+            'UnavailableDelay': 10,
+            'UnreachableDelay': 10,
+            'AlertScriptsPath': '/usr/lib/zabbix/alertscripts',
+            'ExternalScripts': '/usr/lib/zabbix/externalscripts',
+            'ProxyConfigFrequency': 10,
+            'AllowRoot': 1,
+        }
+
+        return TextFile('\n'.join(['{}={}'.format(key, value) for key, value in sorted(config.items())]))
+
+    backend.volumes['config'].files['zabbix_server.conf'] = make_zabbix_server_conf
 
     frontend = Container(
         name='zabbix-frontend',
@@ -125,6 +172,19 @@ def make():
         },
     )
 
+    def make_db_task(name, script):
+        return Task(
+            name=name,
+            image=make_server_image(),
+            volumes={
+                'scripts': ConfigVolume(
+                    dest='/scripts',
+                    files={'run.sh': script}
+                ),
+            },
+            command=['/scripts/run.sh'],
+        )
+
     def make_reinit_script():
         return TextFile(dedent('''#!/bin/bash
             cmd='psql -U postgres -h {door.host} -p {door.port}'
@@ -146,36 +206,15 @@ def make():
     return [postgres, frontend, backend], [reinit, dump, restore]
 
 
-def make_db_task(name, script):
-    return Task(
-        name=name,
-        image=make_server_image(),
-        volumes={
-            'scripts': ConfigVolume(
-                dest='/scripts',
-                files={'run.sh': script}
-            ),
-        },
-        command=['/scripts/run.sh'],
-    )
+def create_zabbix(shipment):
+    shipment.unload_ships()
+    for ship in shipment.ships.values():
+        containers, tasks = make()
+        for cont in containers:
+            ship.place(cont)
+        ship.containers['zabbix-backend'].doors['zabbix-trapper'].expose(10051)
+        ship.containers['zabbix-frontend'].doors['http'].expose(80)
 
+        shipment.tasks.update({task.name: task for task in tasks})
 
-def make_local():
-    ship = LocalShip()
-    return make_for_ship(ship, 'local')
-
-
-def make_for_host(hostname, name=None):
-    from dominator.yandex import get_ship_from_conductor
-    ship = get_ship_from_conductor(hostname)
-    return make_for_ship(ship, name)
-
-
-def make_for_ship(ship, name):
-    containers, tasks = make()
-    for cont in containers:
-        ship.place(cont)
-    ship.containers['zabbix-backend'].doors['zabbix-trapper'].expose(10051)
-    ship.containers['zabbix-frontend'].doors['http'].expose(80)
-    ship.expose_all(range(15000, 16000))
-    return Shipment(name or ship.name, containers=containers, tasks=tasks)
+    shipment.expose_ports(range(15000, 16000))

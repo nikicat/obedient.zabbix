@@ -3,7 +3,7 @@ import setuptools
 if __name__ == '__main__':
     setuptools.setup(
         name='obedient.zabbix',
-        version='0.1.0',
+        version='0.2.0',
         url='https://github.com/yandex-sysmon/obedient.zabbix',
         license='LGPLv3',
         author='Nikolay Bryskin',
@@ -13,17 +13,16 @@ if __name__ == '__main__':
         packages=['obedient.zabbix'],
         namespace_packages=['obedient'],
         package_data={'obedient.zabbix': [
-            'zabbix_server.conf',
             'apache.conf',
             'zabbix.conf.php',
             'frontend.sh',
             'zabbix.sh',
+            'golem-alert-handler.sh',
         ]},
         entry_points={'obedient': [
-            'local = obedient.zabbix:make_local',
-            'one-host = obedient.zabbix:make_for_host',
+            'create = obedient.zabbix:create_zabbix',
         ]},
         install_requires=[
-            'dominator[full] >=11.1',
+            'dominator[full] >=13.1a',
         ],
     )

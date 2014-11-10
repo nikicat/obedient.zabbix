@@ -1,0 +1,12 @@
+language: python
+python:
+- 3.4
+env:
+  matrix:
+  - TOXENV=flake8
+  - TOXENV=pylint
+  - TOXENV=dominator
+before_install: umask 0022
+install: pip install tox bumpversion
+script: tox -v
+after_failure: ls -lR .

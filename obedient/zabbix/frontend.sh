@@ -3,5 +3,5 @@
 id
 mount -oremount,rw /etc/zabbix
 chmod go+rx /etc/zabbix
-mount -oremount,ro /etc/zabbix
+#mount -oremount,ro /etc/zabbix
 apachectl -e debug -DFOREGROUND
