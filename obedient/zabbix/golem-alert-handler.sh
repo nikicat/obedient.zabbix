@@ -3,7 +3,7 @@
 # This is a Zabbix alerting script that convert alerts to Golem events.
 # In case of sending failure it writes message to the log file.
 # This script should be called with subject
-#   {HOST.NAME}:{TRIGGER.NAME}:{STATUS}
+#   {HOST.NAME}#{TRIGGER.NAME}#{STATUS}
 # and body will be added as a description for an event
 
 if [ -n "$GOLEM_ALERT_LOG" ]; then
@@ -15,11 +15,11 @@ subject="$2"
 body="$3"
 
 if [ -z "$to" ] || [ -z "$subject" ] || [ -z "$body" ]; then
-    echo "Usage: $0 <responsible> <object:eventtype:status> <description>" >&2
+    echo "Usage: $0 <responsible> <object#eventtype#status> <description>" >&2
     exit 1
 fi
 
-IFS=: read object eventtype _status <<< "$subject"
+IFS='#' read object eventtype _status <<< "$subject"
 
 if [ "$_status" = "PROBLEM" ]; then
     status=critical
@@ -29,13 +29,6 @@ else
     echo "Unexpected status: $_status. Should be PROBLEM or OK" >& 2
     exit 1
 fi
-
-# Assign responsibles for host
-curl --silent --fail --get "https://golem.yandex-team.ru/api/manage_host.sbml" \
-    --data-urlencode monitor=fqdn \
-    --data-urlencode action=create \
-    --data-urlencode "hostname=$object" \
-    --data-urlencode "resps=$to"
 
 # Submit event
 curl --silent --fail --get "https://golem.yandex-team.ru/api/events/submit.sbml" \
