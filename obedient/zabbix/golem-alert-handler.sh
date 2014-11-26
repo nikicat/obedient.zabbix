@@ -32,7 +32,6 @@ fi
 
 # Submit event
 curl --silent --fail --get "https://golem.yandex-team.ru/api/events/submit.sbml" \
-    --data-urlencode monitor=fqdn \
     --data-urlencode "object=$object" \
     --data-urlencode "eventtype=$eventtype" \
     --data-urlencode "status=$status" \
